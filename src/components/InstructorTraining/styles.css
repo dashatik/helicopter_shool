@@ -1,0 +1,941 @@
+* {
+  font-family: Ubuntu, sans-serif !important; /* Base font for readability */
+}
+
+/* Hero Section */
+.hero-section-instructor {
+  position: relative;
+  background-color: #f9f9f9; /* Fallback for the background image */
+  overflow: hidden;
+  padding: 120px 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* Ensures full viewport height */
+}
+
+/* Background Image */
+.hero-background-instructor {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+  filter: brightness(0.4); /* Makes text more readable */
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+
+
+/* Content Container */
+.hero-content-instructor {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  text-align: center;
+  color: #fff;
+  animation: fadeIn 1s ease-in-out; /* Smooth fade-in animation */
+}
+
+
+
+/* Tagline */
+.hero-tagline-instructor {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  display: inline-block;
+  color: #fff;
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+/* Title */
+.hero-title-instructor {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 24px;
+  animation: fadeIn 1.4s ease-in-out;
+}
+
+/* Description */
+.hero-description-instructor {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 40px;
+  color: #fff;
+  animation: fadeIn 1.6s ease-in-out;
+}
+
+/* Buttons Container */
+.hero-actions-instructor {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  animation: fadeIn 1.8s ease-in-out;
+}
+
+/* Button Styles */
+.btn-instructor {
+  padding: 14px 28px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Primary Button */
+.btn-primary-instructor {
+  background-color: #fff;
+  color: #000;
+  border: none;
+}
+
+.btn-primary-instructor:hover {
+  background-color: #000;
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Secondary Button */
+.btn-secondary-instructor {
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+}
+
+.btn-secondary-instructor:hover {
+  background-color: #000;
+  color: #fff;
+  border: 1px solid #000;
+  transform: translateY(-2px);
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Large Button */
+.btn-large-instructor {
+  font-size: 18px;
+  padding: 16px 32px;
+}
+
+/* Responsive Design */
+@media (max-width: 991px) {
+  .hero-section-instructor {
+    padding: 80px 32px;
+    height: auto; /* Adjust height for smaller screens */
+  }
+
+  .hero-title-instructor {
+    font-size: 36px;
+  }
+
+  .hero-description-instructor {
+    font-size: 16px;
+  }
+
+  .hero-actions-instructor {
+    flex-direction: column;
+    gap: 16px;
+  }
+}
+
+
+/* Why Become an Instructor Section */
+.why-become-instructor {
+  display: flex;
+  gap: 40px;
+  padding: 100px 64px;
+  background-color: #eee;
+  align-items: flex-start;
+  position: relative;
+  overflow: hidden; /* Prevents any overflow from animations */
+}
+
+/* Left Column */
+.left-column-instructor {
+  flex: 1;
+  max-width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Section Title */
+.section-title-instructor {
+  font-size: 36px;
+  font-weight: 700;
+  color: #333;
+  position: relative;
+  line-height: 1.3;
+  margin-bottom: 16px;
+  text-align: left;
+}
+
+/* Line Effect for Title */
+.section-title-instructor::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 50px;
+  height: 3px;
+  background: linear-gradient(90deg, #FF4848, #6649F9);
+  transition: width 0.4s ease;
+}
+
+.section-title-instructor:hover::after {
+  width: 100%; /* Expands line on hover */
+}
+
+/* Section Description */
+.section-description-instructor {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #000;
+}
+
+/* Benefits Grid */
+.benefits-grid-instructor {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-top: 24px;
+}
+
+/* Individual Benefit Item */
+.benefit-item-instructor {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  background: #fff;
+  width: 100%;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+/* Animation Delay for Each Item */
+.benefit-item-instructor:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+.benefit-item-instructor:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+.benefit-item-instructor:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+.benefit-item-instructor:nth-child(4) {
+  animation-delay: 0.8s;
+}
+
+/* Hover Effect for Benefits */
+.benefit-item-instructor:hover,
+.benefit-item-instructor:focus-within {
+  transform: translateY(-5px);
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Benefit Icon */
+.benefit-icon-instructor {
+  width: 37px;
+  height: auto;
+  margin-bottom: 16px;
+  object-fit: contain;
+}
+
+/* Benefit Title */
+.benefit-title-instructor {
+  font-size: 20px;
+  font-weight: 600;
+  color: #000;
+  margin-bottom: 8px;
+}
+
+/* Benefit Description */
+.benefit-description-instructor {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #000;
+}
+
+/* Section Image */
+.section-image-why-instructor {
+  position: absolute;
+  top: 300px;
+  left: 57px;
+  width: 200px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+  opacity: 0.8;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.section-image-why-instructor:hover {
+  transform: scale(1.05);
+  opacity: 1;
+}
+
+/* Animation Keyframes */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 991px) {
+  .why-become-instructor {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .left-column-instructor,
+  .right-column-instructor {
+    max-width: 100%;
+  }
+
+  .benefits-grid-instructor {
+    grid-template-columns: 1fr;
+  }
+
+  .section-image-why-instructor {
+    position: absolute;
+    left: 450px;
+    top: 90px;
+    width: 100px;
+    margin-bottom: 24px;
+  }
+}
+
+
+
+/* Course Details Section */
+.course-details-instructor {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 100px 54px;
+  background-color: #eee;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Content Wrapper */
+.content-wrapper-details-instructor {
+  flex: 1;
+  max-width: 600px;
+  text-align: left;
+}
+
+/* Section Tagline */
+.section-tagline-details-instructor {
+  font-size: 16px;
+  font-weight: 600;
+  color: #000;
+  margin-bottom: 16px;
+}
+
+/* Section Title with Line Effect */
+.section-title-details-instructor {
+  font-size: 38px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 24px;
+  line-height: 1.4;
+  position: relative;
+  text-align: left;
+}
+
+.section-title-details-instructor::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 50px;
+  height: 3px;
+  background: linear-gradient(90deg, #FF4848, #6649F9);
+  transition: width 0.4s ease;
+}
+
+.section-title-details-instructor:hover::after {
+  width: 100%; /* Expands the underline on hover */
+}
+
+/* Section Description */
+.section-description-details-instructor {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #000;
+  margin-bottom: 40px;
+}
+
+/* Feature List */
+.feature-list-details-instructor {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  animation: fadeIn 0.8s ease-in;
+}
+
+/* Individual Feature Item */
+.feature-item-details-instructor {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-item-details-instructor:hover {
+  transform: translateY(-3px);
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Feature Icon */
+.feature-icon-details-instructor {
+  width: 14px;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Feature Description */
+.feature-description-details-instructor {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-top: -10px;
+  color: #000;
+}
+
+/* Course Actions */
+.course-actions-details-instructor {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-top: 40px;
+}
+
+/* Primary Button */
+.btn-detailes-instructor {
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 16px;
+  text-decoration: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+/* Primary Button Styles */
+.btn-primary-detailes-instructor {
+  background-color: transparent;
+  color: #000;
+  border: 1px solid #000;
+}
+
+.btn-primary-detailes-instructor:hover {
+  background-color: #222;
+  color: #eee;
+  transform: translateY(-3px);
+}
+
+/* Link Button Styles */
+.btn-link-detailes-instructor {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #222;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.btn-link-detailes-instructor:hover {
+  text-decoration: underline;
+}
+
+.link-icon-detailes-instructor {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+}
+
+/* Section Image */
+.section-image-detailes-instructor {
+  flex: 1;
+  max-width: 500px;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.section-image-detailes-instructor:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 991px) {
+  .course-details-instructor {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .content-wrapper-details-instructor {
+    max-width: 100%;
+  }
+
+  .section-image-detailes-instructor {
+    max-width: 400px;
+    margin-top: 40px;
+  }
+}
+
+
+/* Prerequisites Section */
+.prerequisites-instructor {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 100px 64px;
+  background-color: #222;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Section Image */
+.section-image-prerequisites-instructor {
+  flex: 1;
+  max-width: 500px;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.section-image-prerequisites-instructor:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+/* Content Wrapper */
+.content-wrapper-prerequisites-instructor {
+  flex: 1;
+  max-width: 600px;
+  text-align: left;
+  animation: fadeIn 0.8s ease-in;
+}
+
+/* Section Tagline */
+.section-tagline-prerequisites-instructor {
+  font-size: 16px;
+  font-weight: 600;
+  color: #eee;
+  margin-bottom: 16px;
+}
+
+/* Section Title with Line Effect */
+.section-title-prerequisites-instructor {
+  font-size: 36px;
+  font-weight: 700;
+  color: #eee;
+  margin-bottom: 24px;
+  line-height: 1.4;
+  position: relative;
+  text-align: left;
+}
+
+.section-title-prerequisites-instructor::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 50px;
+  height: 3px;
+  background: linear-gradient(90deg, #FF4848, #6649F9);
+  transition: width 0.4s ease;
+}
+
+.section-title-prerequisites-instructor:hover::after {
+  width: 100%;
+}
+
+/* Section Description */
+.section-description-prerequisites-instructor {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #eee;
+  margin-bottom: 40px;
+}
+
+/* Requirements Grid */
+.requirements-grid-prerequisites-instructor {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two columns */
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+/* Requirement Item */
+.requirement-item-prerequisites-instructor {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 10px;
+  background: #eee;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.requirement-item-prerequisites-instructor:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Requirement Icon */
+.requirement-icon-prerequisites-instructor {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+/* Requirement Title */
+.requirement-title-prerequisites-instructor {
+  font-size: 18px;
+  font-weight: 600;
+  color: #222;
+}
+
+/* Requirement Description */
+.requirement-description-prerequisites-instructor {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #222;
+}
+
+/* Prerequisite Actions */
+.prerequisite-actions-instructor {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-top: 40px;
+}
+
+/* Primary Button */
+.btn-prere-instructor {
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.btn-primary-prere-instructor {
+  background-color: #eee;
+  color: #222;
+  border: none;
+}
+
+.btn-primary-prere-instructor:hover {
+  background-color: #222;
+  color: #eee;
+  transform: translateY(-3px);
+}
+
+/* Link Button */
+.btn-link-prere-instructor {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #eee;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.btn-link-prere-instructor:hover {
+  text-decoration: underline;
+}
+
+.link-icon-prere-instructor {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+}
+
+/* Fade-In Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 991px) {
+  .prerequisites-instructor {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .content-wrapper-prerequisites-instructor {
+    max-width: 100%;
+  }
+
+  .section-image-prerequisites-instructor {
+    max-width: 100%;
+    margin-bottom: 40px;
+  }
+
+  .requirements-grid-prerequisites-instructor {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* Unlock Potential Section */
+.unlock-potential-instructor {
+  padding: 100px 64px;
+  background-color: #eee;
+  text-align: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Section Title with Line Effect */
+.section-title-unlock-instructor {
+  font-size: 16px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 24px;
+  line-height: 1.4;
+  position: relative;
+}
+
+.section-title-unlock-instructor::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 3px;
+  background: linear-gradient(90deg, #FF4848, #6649F9);
+  transition: width 0.4s ease;
+}
+
+.section-title-unlock-instructor:hover::after {
+  width: 100%;
+}
+
+/* Section Tagline */
+.section-tagline-unlock-instructor {
+  font-size: 36px;
+  font-weight: 600;
+  color: #000;
+  margin-bottom: 16px;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Section Description */
+.section-description-unlock-instructor {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #777;
+  margin-bottom: 40px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Potential Grid */
+.potential-grid-unlock-instructor {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+/* Potential Item */
+.potential-item-unlock-instructor {
+  padding: 4px;
+  text-align: center;
+  max-width: 350px;
+  flex: 1;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.potential-item-unlock-instructor:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Potential Image */
+.potential-image-unlock-instructor {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.potential-item-unlock-instructor:hover .potential-image-unlock-instructor {
+  transform: scale(1.05);
+}
+
+/* Potential Title */
+.potential-title-unlock-instructor {
+  font-size: 20px;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 16px;
+}
+
+/* Potential Description */
+.potential-description-unlock-instructor {
+  list-style-type: disc; /* Use bullet points */
+  padding-left: 20px;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #222;
+}
+
+.potential-description-unlock-instructor li {
+  margin-bottom: 8px; /* Add spacing between list items */
+  transition: color 0.3s ease;
+}
+
+.potential-description-unlock-instructor li:hover {
+  color: #FF4848; /* Highlight text on hover */
+}
+
+/* Potential Actions */
+.potential-actions-instructor {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+/* Secondary Button */
+.btn-secondary-instructor-potential {
+  background-color: transparent;
+  color: #222;
+  padding: 12px 24px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  border: 1px solid #222;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.btn-secondary-instructor-potential:hover {
+  background-color: #222;
+  color: #eee;
+  transform: translateY(-3px);
+}
+
+/* Link Button */
+.btn-link-unlock-instructor {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #222;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.btn-link-unlock-instructor:hover {
+  text-decoration: underline;
+}
+
+.link-icon-unlock-instructor {
+  width: 16px;
+  height: 16px;
+}
+
+/* Fade-In Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 991px) {
+  .unlock-potential-instructor {
+    padding: 80px 32px;
+  }
+
+  .potential-grid-unlock-instructor {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .potential-item-unlock-instructor {
+    max-width: 100%;
+  }
+
+  .potential-description-unlock-instructor {
+    text-align: left;
+  }
+}

@@ -1,0 +1,1445 @@
+/* Hero Section Styles */
+.hero-cpl {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  padding: 120px 64px;
+  background-color: #111; /* Fallback color */
+  overflow: hidden;
+}
+
+.hero-bg-cpl {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+  opacity: 0.5; /* Dim the background for better text visibility */
+  transform: scale(1.1); /* Slight zoom effect */
+  transition: transform 5s ease; /* Slow pan effect */
+}
+
+.hero-bg-cpl:hover {
+  transform: scale(1.15); /* Zooms further on hover */
+}
+
+.hero-content-cpl {
+  position: relative;
+  z-index: 2; /* Bring content above the background image */
+  max-width: 700px;
+  animation: fadeIn 1.5s ease;
+}
+
+/* Hero Tagline */
+.hero-tagline-cpl {
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #eee; /* Accent color */
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+/* Hero Title */
+.hero-title-cpl {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 24px;
+  animation: slideInDown 1s ease; /* Adds slide-in effect */
+}
+
+/* Hero Description */
+.hero-description-cpl {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.6;
+  margin-bottom: 40px;
+  color: #eee;
+  opacity: 0.9;
+}
+
+/* Action Buttons */
+.hero-actions-cpl {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.btn-cpl {
+  padding: 14px 28px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-cpl:focus {
+  outline: none;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.btn-primary-cpl {
+  background-color: #fff;
+  color: #000;
+  border: none;
+  text-decoration: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary-cpl:hover {
+  background-color: #000;
+  color: #fff;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.btn-secondary-cpl {
+  background-image: linear-gradient(to right, #F1C189, #FFA245);
+  color: #000;
+  text-decoration: none;
+  border: none;
+}
+
+.btn-secondary-cpl:hover {
+  background: transparent;
+  color: #fff;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(255, 255, 255, 0.2);
+}
+
+/* Animation Effects */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 991px) {
+  .hero-title-cpl {
+    font-size: 36px;
+  }
+
+  .hero-description-cpl {
+    font-size: 16px;
+  }
+
+  .hero-actions-cpl {
+    flex-direction: column;
+    gap: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title-cpl {
+    font-size: 28px;
+  }
+
+  .hero-description-cpl {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+
+  .btn-cpl {
+    width: 100%; /* Make buttons full width on very small screens */
+  }
+}
+
+
+/* Course Explanation Section */
+.course-explanation-cpl {
+  background-color: #222; /* Dark background */
+  padding: 80px 64px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative; /* For decorative elements */
+  overflow: hidden;
+}
+
+/* Decorative Gradient Overlay */
+.course-explanation-cpl::before {
+  content: "";
+  position: absolute;
+  top: -50px;
+  right: -50px;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, rgba(255, 72, 72, 0.2), transparent 30%);
+  z-index: 0;
+  animation: pulse 5s infinite;
+}
+
+.course-explanation-cpl::after {
+  content: "";
+  position: absolute;
+  bottom: -40px;
+  left: -50px;
+  width: 100px;
+  height: 200px;
+  background: radial-gradient(circle, rgba(255, 178, 102, 0.2), transparent 30%);
+  z-index: 0;
+  animation: pulse 8s infinite alternate;
+}
+
+/* Container for Two Columns */
+.explanation-container-cpl {
+  display: flex;
+  max-width: 1200px;
+  width: 100%;
+  gap: 40px;
+  align-items: flex-start;
+  position: relative;
+  z-index: 1; /* Ensure content is above decorative elements */
+}
+
+/* Left Column */
+.explanation-left-cpl {
+  flex: 1;
+  opacity: 0;
+  transform: translateY(50px);
+  animation: fadeIn 1s ease forwards;
+}
+
+.explanation-title-cpl {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 20px;
+  color: #eee;
+  position: relative;
+  display: inline-block;
+  transition: color 0.3s ease;
+}
+
+.explanation-title-cpl:hover {
+  color: #e9e9e9;
+}
+
+.explanation-title-cpl:hover::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, #ff4848, #6649f9);
+  animation: slideIn 0.5s ease;
+}
+
+/* Right Column */
+.explanation-right-cpl {
+  flex: 1;
+  opacity: 0;
+  transform: translateY(50px);
+  animation: fadeIn 1s ease forwards 0.3s; /* Slight delay for staggered effect */
+}
+
+.explanation-text-cpl {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #fff;
+  opacity: 0.9;
+  transition: opacity 0.3s ease;
+}
+
+.explanation-text-cpl:hover {
+  opacity: 1;
+}
+
+/* Gradient Text */
+.gradient-text {
+  background: linear-gradient(90deg, #ff4848, #6649f9, #fff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.9);
+    opacity: 0.5;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(0.9);
+    opacity: 0.5;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .course-explanation-cpl {
+    padding: 60px 20px;
+  }
+
+  .explanation-container-cpl {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .explanation-left-cpl, .explanation-right-cpl {
+    text-align: center;
+  }
+
+  .explanation-title-cpl {
+    font-size: 32px;
+  }
+
+  .explanation-text-cpl {
+    font-size: 16px;
+  }
+}
+
+
+/* Course Details Section */
+.course-details-cpl {
+  background-color: #222;
+  padding: 100px 64px;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Content */
+.details-content-cpl {
+  max-width: 1200px;
+  position: relative;
+  z-index: 1; /* Ensures content is above decorative elements */
+}
+
+/* Tagline */
+.details-tagline-cpl {
+  font-size: 16px;
+  font-weight: 600;
+  color: #999;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  animation: fadeIn 1s ease forwards;
+}
+
+/* Title */
+.details-title-cpl {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 24px;
+  max-width: 600px;
+  color: #eee;
+  animation: fadeIn 1s ease forwards 0.2s;
+}
+
+/* Description */
+.details-description-cpl {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #eee;
+  margin-bottom: 40px;
+  max-width: 650px;
+  text-align: left;
+  animation: fadeIn 1s ease forwards 0.4s;
+}
+
+/* Learning Points */
+.learning-points-cpl {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-bottom: 40px;
+  background-color: #eee;
+  max-width: 700px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.learning-point-cpl {
+  flex: 1 1 calc(50% - 24px);
+  padding: 16px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.learning-point-cpl:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  background-color: #f1f1f1;
+  border-radius: 10px;
+}
+
+/* Point Title */
+.point-title-cpl {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 5px;
+  color: #333;
+  animation: fadeIn 1s ease forwards 0.6s;
+}
+
+/* Point Description */
+.point-description-cpl {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-top: -1px;
+  color: #666;
+  animation: fadeIn 1s ease forwards 0.8s;
+}
+
+/* Actions */
+.details-actions-cpl {
+  display: flex;
+  gap: 20px;
+  animation: fadeIn 1s ease forwards 1s;
+}
+
+.btn-coursedetails-secondary-cpl {
+  background-image: linear-gradient(to right, #f1c189, #ffa245);
+  color: #222;
+  padding: 12px 30px;
+  border-radius: 10px;
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.btn-coursedetails-secondary-cpl:hover {
+  background-color: #d43c3c;
+  transform: translateY(-3px);
+}
+
+.btn-link-coursedetailes-cpl {
+  background-color: transparent;
+  color: #eee;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.btn-link-coursedetailes-cpl:hover {
+  color: #fff;
+  transform: translateY(-3px);
+}
+
+/* Decorative Image */
+.details-image-cpl {
+  position: absolute;
+  bottom: -50px;
+  right: -150px;
+  max-width: 600px;
+  width: 100%;
+  height: auto;
+  z-index: 0;
+  opacity: 0.9;
+  pointer-events: none;
+  animation: fadeIn 1.5s ease forwards;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.9);
+    opacity: 0.5;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(0.9);
+    opacity: 0.5;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 991px) {
+  .learning-point-cpl {
+    flex: 1 1 100%; /* Single column on smaller screens */
+  }
+
+  .details-image-cpl {
+    bottom: -20px;
+    right: -30px;
+    max-width: 300px;
+  }
+
+  .details-description-cpl, .details-title-cpl {
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .details-actions-cpl {
+    justify-content: center;
+  }
+}
+
+
+/* Duration & Scheduling Section */
+.duration-scheduling-cpl {
+  background-color: #eee;
+  padding: 120px 64px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle Background Gradient */
+.duration-scheduling-cpl::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+/* Content Container */
+.scheduling-content-cpl {
+  max-width: 1100px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+/* Section Title */
+.scheduling-title-cpl {
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 1.3;
+  color: #222;
+  margin-bottom: 32px;
+  font-family: 'Playfair Display', serif; /* Luxurious typography */
+  letter-spacing: 0.5px;
+}
+
+/* Description */
+.scheduling-description-cpl {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 48px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: 'Lora', serif;
+}
+
+/* Schedule Options Container */
+.schedule-options-cpl {
+  display: flex;
+  gap: 32px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Individual Schedule Option */
+.schedule-option-cpl {
+  flex: 1 1 calc(50% - 32px); /* Two items per row */
+  background-color: #fff;
+  color: #333;
+  padding: 24px;
+  border-radius: 15px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: left;
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  cursor: pointer;
+}
+
+/* Hover Effects for Options */
+.schedule-option-cpl:hover {
+  transform: translateY(-6px);
+  box-shadow: 0px 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Option Image Styling */
+.option-image-cpl img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+
+}
+
+/* Text Container */
+.option-text-cpl {
+  flex: 1;
+}
+
+/* Schedule Option Title */
+.option-title-cpl {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #111;
+  font-family: 'Playfair Display', serif;
+}
+
+/* Schedule Option Description */
+.option-description-cpl {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #777;
+  font-family: 'Lora', serif;
+}
+
+/* Luxury Accent Line */
+.schedule-option-cpl::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 3px;
+  background: linear-gradient(to right, #ffce54, #f9a84d);
+  transition: width 0.3s ease;
+}
+
+.schedule-option-cpl:hover::after {
+  width: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 991px) {
+  .schedule-option-cpl {
+    flex: 1 1 100%; /* Single column on smaller screens */
+  }
+
+  .scheduling-title-cpl {
+    font-size: 36px;
+  }
+
+  .scheduling-description-cpl {
+    font-size: 16px;
+  }
+}
+
+
+/* Milestones Section */
+.milestones-cpl {
+  background-color: #eee;
+  padding: 112px 64px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* Container for Two Columns */
+.milestones-container-cpl {
+  display: flex;
+  max-width: 1200px;
+  gap: 80px; /* 80px gap between columns */
+  align-items: flex-start;
+  width: 100%;
+}
+
+/* Left Column: Header and Buttons */
+.milestones-left-cpl {
+  flex: 1; /* Make the left column wider */
+  max-width: 500px; /* Optional: Limit the width for better balance */
+  display: flex;
+  flex-direction: column;
+  gap: 24px; /* Add spacing between elements */
+  align-items: flex-start; /* Align content to the start */
+  text-align: left;
+}
+
+.milestones-tagline-cpl {
+  font-size: 18px;
+  font-weight: 600;
+  color: #000;
+  margin-bottom: 16px;
+}
+
+.milestones-title-cpl {
+  font-size: 42px;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 24px;
+  line-height: 1.3;
+  width: 600px !important;
+}
+.milestone-title-clp:hover {
+  color: #222;
+}
+
+.milestone-title-clp:hover::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, #ff4848, #6649f9);
+  animation: slideIn 0.5s ease;
+}
+
+.milestones-actions-cpl {
+  display: flex;
+  align-items: center; /* Ensure alignment across elements */
+  gap: 16px;
+  margin-top: 24px;
+}
+
+/* Secondary Button */
+.btn-secondary-milestones-cpl {
+  background-color: transparent;
+  color: #000;
+  padding: 14px 28px;
+  border: 1px solid #000;
+  border-radius: 10px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.btn-secondary-milestones-cpl:hover {
+  background-color: #222;
+  color: #fff;
+  transform: translateY(-3px);
+}
+
+/* Link Button */
+.btn-link-cpl {
+  color: #000;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  display: flex;
+  align-items: center; /* Align the link content with the button */
+  gap: 8px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.btn-link-cpl:hover {
+  transform: translateY(-3px);
+}
+
+.link-icon-cpl {
+  width: 16px;
+  height: 16px;
+}
+
+/* Right Column: Timeline */
+.milestones-right-cpl {
+  flex: 2; /* Allocate more space to the timeline */
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+/* Timeline Container */
+.timeline-cpl {
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+  position: relative; /* Necessary for absolute positioning of dividers */
+}
+
+/* Timeline Item */
+.timeline-item-cpl {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  text-align: left;
+  position: relative; /* For divider positioning */
+}
+
+/* Timeline Icon */
+.timeline-icon-cpl {
+  flex-shrink: 0;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease; /* Smooth hover effects */
+}
+
+.timeline-icon-cpl:hover {
+  transform: scale(1.1); /* Slight zoom effect on hover */
+  
+}
+
+/* Timeline Icon Image */
+.timeline-icon-cpl img {
+  max-width: 60%;
+  max-height: 60%;
+  transition: transform 0.3s ease, filter 0.3s ease; /* Smooth hover effects */
+}
+
+.timeline-icon-cpl:hover img {
+  transform: scale(1.2); /* Enlarge the image slightly */
+  filter: brightness(1.2); /* Brighten the image on hover */
+}
+
+.timeline-content-cpl {
+  flex: 1;
+}
+
+.milestone-title-cpl {
+  font-size: 20px;
+  font-weight: 600;
+  color: #000;
+}
+
+/* Timeline Divider */
+.timeline-divider-cpl {
+  position: absolute;
+  top: 70px;
+  left: 40px;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 80px;
+  background: linear-gradient(to bottom, #FF4848, #6649F9, #686770);
+  border-radius: 2px;
+}
+
+@media (max-width: 991px) {
+  .schedule-option-cpl {
+    flex: 1 1 calc(100% - 32px); /* Full width for each item */
+    margin-bottom: 24px;
+  }
+
+  .scheduling-title-cpl {
+    font-size: 36px;
+  }
+
+  .scheduling-description-cpl {
+    font-size: 16px;
+  }
+}
+
+/* Small Screens */
+@media (max-width: 576px) {
+  .scheduling-title-cpl {
+    font-size: 32px;
+    line-height: 1.4;
+  }
+
+  .scheduling-description-cpl {
+    font-size: 14px;
+  }
+
+  .schedule-option-cpl {
+    padding: 16px;
+  }
+
+  .option-title-cpl {
+    font-size: 18px;
+  }
+
+  .option-description-cpl {
+    font-size: 14px;
+  }
+
+  .option-image-cpl img {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+
+/* Career Opportunities Section */
+.career-opportunities-cpl {
+  display: flex;
+  align-items: center;
+  padding: 112px 64px;
+  background-color: #eee;
+  gap: 40px;
+}
+
+/* Image */
+.opportunities-image-cpl {
+  flex: 1;
+  max-width: 500px;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* Content Area */
+.opportunities-content-cpl {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 24px;
+}
+
+/* Title */
+.opportunities-title-cpl {
+  font-size: 40px;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: -20px;
+}
+
+/* Description */
+.opportunities-description-cpl {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #000;
+}
+
+/* Careers List Wrapper */
+.careers-list-cpl {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  padding: 20px;
+  position: relative;
+}
+
+.career-header-cpl {
+  display: flex;
+  padding: 0px 20px;
+  text-align: flex-start;
+  
+}
+/* Career Item */
+.career-item-cpl {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Divider */
+.careers-list-cpl:before {
+  content: "";
+  position: absolute;
+  top: 15px;
+  bottom: 0;
+  left: 285px;
+  width: 2px;
+  height: 330px;
+  background: linear-gradient(to bottom, #ff4848, #6649f9, #686770);
+}
+
+/* Career Title */
+.career-title-cpl {
+  font-size: 20px;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 8px;
+}
+
+/* Career Description */
+.career-description-cpl {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #000;
+}
+
+/* Responsive Design */
+@media (max-width: 991px) {
+  .career-opportunities-cpl {
+    flex-direction: column;
+    text-align: center;
+    gap: 40px;
+  }
+
+  .careers-list-cpl {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .careers-list-cpl:before {
+    display: none;
+  }
+
+  .opportunities-image-cpl {
+    max-width: 80%;
+    margin-bottom: 20px;
+  }
+
+  .opportunities-title-cpl {
+    font-size: 36px;
+  }
+
+  .opportunities-description-cpl {
+    font-size: 16px;
+  }
+
+  .career-item-cpl {
+    padding: 20px;
+  }
+
+  .career-title-cpl {
+    font-size: 18px;
+  }
+
+  .career-description-cpl {
+    font-size: 14px;
+  }
+}
+
+
+/* Testimonial Section */
+.testimonial-cpl {
+  background-color: #222;
+  padding: 80px 64px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* Content Area */
+.testimonial-content-cpl {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+/* Rating Section */
+/* Rating Section with Animation */
+.rating-cpl {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.star-icon-cpl {
+  width: 24px;
+  height: 24px;
+  opacity: 0;
+  transform: scale(0);
+  animation: star-appear 0.8s ease-in-out forwards;
+}
+
+.star-icon-cpl:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+.star-icon-cpl:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+.star-icon-cpl:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+.star-icon-cpl:nth-child(4) {
+  animation-delay: 0.8s;
+}
+
+.star-icon-cpl:nth-child(5) {
+  animation-delay: 1s;
+}
+
+@keyframes star-appear {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Testimonial Quote */
+.testimonial-quote-cpl {
+  font-size: 20px;
+  font-style: italic;
+  color: #eee;
+  line-height: 1.6;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+/* Author Section */
+.testimonial-author-cpl {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.author-image-cpl {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.author-info-cpl {
+  text-align: left;
+}
+
+.author-name-cpl {
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.author-position-cpl {
+  font-size: 16px;
+  color: #fff;
+}
+/* Slider Navigation Buttons */
+.slider-button-cpl {
+  background: none;
+  border: none;
+  position: absolute;
+  top: 10px;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.slider-button-left-cpl {
+  left: 20px;
+}
+
+.slider-button-right-cpl {
+  right: 20px;
+}
+
+.slider-button-icon-cpl {
+  width: 20px;
+  height: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .testimonial-content-cpl {
+    padding: 0 16px;
+  }
+
+  .author-image-cpl {
+    width: 48px;
+    height: 48px;
+  }
+
+  .author-name-cpl {
+    font-size: 16px;
+  }
+
+  .author-position-cpl {
+    font-size: 14px;
+  }
+
+  .testimonial-quote-cpl {
+    font-size: 18px;
+  }
+}
+
+/* Call to Action Section */
+.call-to-action-cpl {
+  position: relative;
+  background-color: #222;
+  padding: 112px 64px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Background Image */
+.cta-background {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: auto;
+  opacity: 0.2;
+  z-index: 1;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+/* Content Area */
+.cta-content-cpl {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Title Styling */
+.cta-title-cpl {
+  font-size: 40px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+/* Description Styling */
+.cta-description-cpl {
+  font-size: 18px;
+  color: #fff;
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+
+/* Action Buttons */
+.cta-actions-cpl {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Primary Button */
+.btn-CallToAction-primary-cpl {
+  background-image: linear-gradient(to right, #F1C189, #FFA245);
+  color: #000;
+  padding: 14px 28px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.btn-CallToAction-primary-cpl:hover {
+  background-color: #d43c3c;
+  transform: translateY(-3px);
+}
+
+/* Secondary Button */
+.btn-CallToAction-secondary-cpl {
+  background-color: transparent;
+  color: #fff;
+  padding: 14px 28px;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.btn-CallToAction-secondary-cpl:hover {
+  background-color: #fff;
+  color: #000;
+  transform: translateY(-3px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .cta-content-cpl {
+    padding: 0 16px;
+  }
+
+  .cta-actions-cpl {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .cta-title-cpl {
+    font-size: 32px;
+  }
+
+  .cta-description-cpl {
+    font-size: 16px;
+  }
+}
+
+/* FAQ Section */
+.faq-cpl {
+  padding: 80px 80px;
+  background-color: #eee;
+}
+
+.faq-container-cpl {
+  width: 800px;
+  margin: 0 auto;
+  border-radius: 10px;
+  padding: 40px;
+  background: #fff;
+  box-shadow: 26px 29px 25px 0px rgba(0, 0, 0, 0.25);
+}
+
+/* Header Section */
+.faq-header-cpl {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.faq-title-cpl {
+  font-size: 2.5rem;
+  color: #000;
+  font-weight: bold;
+}
+
+.faq-description-cpl {
+  font-size: 18px;
+  color: #000;
+  line-height: 1.6;
+  font-weight: normal;
+  text-align: center;
+}
+
+.btn-secondary-faq-cpl {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: transparent;
+  color: #222;
+  border: 1px solid #222;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-secondary-faq-cpl:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+/* Accordion */
+.accordion-cpl {
+  margin-top: 30px;
+
+}
+
+.accordion-item-cpl {
+  border-bottom: 1px solid #ddd;
+  padding: 15px 0;
+}
+
+.accordion-item-cpl:hover {
+  border-color: #007bff;
+}
+
+.accordion-header-cpl {
+  width: 100%;
+  background: #ffff !important;
+  border: none;
+  font-size: 1.25rem;
+  color: #000;
+  text-align: left;
+  padding: 10px 0;
+  display: flex;
+  gap: 16px;
+  justify-content: space-between;
+  align-self: stretch;
+  cursor: pointer;
+}
+
+.accordion-header-cpl h3 {
+  flex-grow: 1;
+
+}
+
+.accordion-icon-cpl {
+  width: 16px;
+  height: 16px;
+  transition: transform 0.3s ease;
+}
+
+.accordion-icon-cpl.rotate {
+  transform: rotate(180deg);
+}
+
+.accordion-content-cpl {
+  font-size: 1rem;
+  color: #222;
+  padding: 10px 0 0 20px;
+  line-height: 1.5;
+}
+
+.accordion-content-cpl p {
+  font-size: 16px;
+  color: #222;
+  line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .faq-container-cpl {
+    padding: 20px;
+  }
+
+  .faq-title-cpl {
+    font-size: 2rem;
+  }
+
+  .faq-description-cpl {
+    font-size: 16px;
+  }
+
+  .accordion-header-cpl {
+    padding: 12px 16px;
+  }
+
+  .accordion-content-cpl {
+    padding: 10px 16px;
+  }
+}

@@ -1,0 +1,695 @@
+* {
+  font-family: Ubuntu, sans-serif !important; /* Base font for readability */
+}
+
+/* Header Section Styling */
+.header-apply {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 20px; /* Adjust padding for responsiveness */
+  height: 400px; /* Consistent height */
+  background: linear-gradient(to right, #000, #333 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Optional Animated Background Overlay */
+.header-apply::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(50, 50, 50, 0.8));
+  z-index: 1; /* Overlay on top of background but beneath content */
+  pointer-events: none;
+}
+
+/* Content Container */
+.header-container-apply {
+  max-width: 800px;
+  text-align: center;
+  padding: 0 20px;
+  position: relative;
+  z-index: 2; /* Ensure content is above overlay */
+}
+
+/* Header Title */
+.header-title-apply {
+  font-size: 48px; /* Prominent title size */
+  font-weight: 700;
+  margin-bottom: 20px;
+  line-height: 1.2;
+  color: #fff;
+  text-transform: uppercase;
+  position: relative;
+}
+
+/* Gradient Line Effect for Title */
+.header-title-apply::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, #FF4848, #6649F9);
+  transition: width 0.4s ease;
+}
+
+.header-title-apply:hover::after {
+  width: 500px; /* Expand line on hover */
+}
+
+/* Header Description */
+.header-description-apply {
+  font-size: 20px;
+  font-weight: 400;
+  color: #ddd;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+  transition: color 0.3s ease;
+}
+
+.header-description-apply:hover {
+  color: #fff; /* Brighten text on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 991px) {
+  .header-title-apply {
+    font-size: 36px;
+  }
+
+  .header-description-apply {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header-apply {
+    height: auto; /* Allow height to adjust for smaller screens */
+    padding: 60px 20px;
+  }
+
+  .header-title-apply {
+    font-size: 28px;
+  }
+
+  .header-description-apply {
+    font-size: 16px;
+  }
+}
+
+
+/*ApplicationProcess*/
+.application-process {
+  background-color: #eee;
+  padding: 112px 64px;
+}
+
+.process-content {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 80px;
+}
+
+.left-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.process-header {
+  margin-bottom: 20px;
+  width: 700px;
+}
+
+.process-tagline {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+}
+
+.process-title {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-top: 16px;
+  position: relative;
+}
+
+.process-title::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, #FF4848, #6649F9);
+  transition: width 0.4s ease;
+}
+
+.process-title:hover::after {
+  width: 630px; /* Extend gradient line on hover */
+}
+
+.process-decoration {
+  margin-top: 100px;
+  margin-left: 170px;
+  max-width: 300px;
+  align-self: flex-start;
+}
+
+.timeline {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.timeline-item {
+  display: flex;
+  gap: 40px;
+}
+
+.timeline-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animation for interactive effect */
+}
+
+.timeline-icon img {
+  transition: transform 0.3s ease; /* Smooth transition for the hover effect */
+}
+.timeline-icon img:hover {
+  transform: scale(1.1); /* Slightly enlarge the icon on hover */
+}
+
+.timeline-divider {
+  width: 2px;
+  height: 100px;
+  background: linear-gradient(to bottom, #FF4848, #6649F9, #686770);
+  margin-top: 16px;
+}
+
+.timeline-content {
+  flex: 1;
+}
+
+.timeline-step {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.timeline-description {
+  font-size: 16px;
+}
+
+/* Responsive Design */
+@media (max-width: 991px) {
+  .process-content {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .process-title {
+    font-size: 28px;
+  }
+
+  .timeline-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .timeline-divider {
+    height: 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  .process-content {
+    gap: 20px;
+  }
+
+  .process-title {
+    font-size: 24px;
+  }
+
+  .timeline-step {
+    font-size: 18px;
+  }
+}
+
+  /* Application Form Section */
+.application-form {
+  background-color: #eee;
+  padding: 112px 64px;
+  gap: 48px;
+}
+
+.form-header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.form-tagline {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+}
+
+.form-title {
+  font-size: 48px;
+  font-weight: 700;
+  margin: 20px;
+}
+
+.form-description {
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.form {
+  max-width: 768px;
+  margin: 0 auto;
+}
+
+.form-row {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.form-group {
+  flex: 1;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #000;
+  border-image: linear-gradient(to left, #FF4848, #6649F9, #686770) 1 !important;
+  border-radius: none;
+  background-color: #fff;
+}
+
+/* Fieldset and Legend Styling for Two-Column Layout */
+fieldset {
+  border: none;
+  padding: 0;
+  margin: 24px 0;
+}
+
+legend {
+  margin-bottom: 16px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.radio-option {
+  margin-bottom: 8px;
+}
+
+/* Two-Column Layout for Radio Options */
+fieldset .radio-option-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+}
+
+/* Checkbox Group Styling */
+.checkbox-group {
+  display: flex;
+  align-items: center !important;
+  gap: 8px;
+  margin-bottom: 24px;
+  width: 800px;
+  gap: 24px; 
+}
+
+.checkbox-group input {
+  width: auto;
+  margin-top: 20px;
+}
+
+/* Centered Submit Button Container */
+.button-container-form {
+  display: flex;
+  justify-content: center;
+  margin-top: 24px;
+}
+
+/* Submit Button */
+.btn-primary-form {
+  width: auto;
+  padding: 12px 24px;
+  background-color: #222;
+  color: #eee;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-primary-form:hover {
+  background-color: #333;
+  transform: scale(1.05); /* Add slight scaling effect on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .form-title {
+    font-size: 28px;
+  }
+
+  .form-description {
+    font-size: 14px;
+  }
+
+  .form-row {
+    flex-direction: column; /* Stack fields on smaller screens */
+    gap: 16px;
+  }
+
+  .button-container-form {
+    margin-top: 16px;
+  }
+
+  .btn-primary-form {
+    width: 100%; /* Full-width button on smaller screens */
+  }
+}
+  
+  .eligibility-section {
+    background-color: #222;
+    color: #fff;
+    padding: 112px 64px;
+    text-align: center;
+  }
+  
+  .eligibility-content {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .eligibility-title {
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 24px;
+  }
+  
+  .eligibility-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(90deg, #FF4848, #6649F9);
+    margin: 8px auto 0;
+    transition: width 0.3s ease;
+  }
+  
+  .eligibility-title:hover::after {
+    width: 350px; /* Expands the gradient line on hover */
+  }
+  
+  .eligibility-description {
+    font-size: 18px;
+    margin-bottom: 32px;
+  }
+  
+  .requirements-list {
+    display: flex;
+    gap: 24px;
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .requirement-item {
+    flex: 1;
+    background-color: #fff;
+    color: #000;
+    padding: 24px;
+    border-radius: 10px;
+  }
+  
+  .requirement-title {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 16px;
+  }
+  
+  .requirement-description {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  
+  @media (max-width: 768px) {
+    .requirements-list {
+      grid-template-columns: 1fr; /* Stacks into a single column on smaller screens */
+    }
+  }
+  .requirement-item {
+    flex: 1;
+    background-color: #fff;
+    color: #000;
+    padding: 24px;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+  }
+  
+  /* Hover and Focus Effects */
+  .requirement-item:hover,
+  .requirement-item:focus {
+    transform: translateY(-8px); /* Lifts the item on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Adds shadow for depth */
+  }
+  
+  .requirement-title {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    transition: color 0.3s ease;
+  }
+  
+  /* Title Color Change on Hover */
+  .requirement-item:hover .requirement-title,
+  .requirement-item:focus .requirement-title {
+    color: #222; /* Changes the title color on hover/focus */
+  }
+  
+  .requirement-description {
+    font-size: 16px;
+    line-height: 1.5;
+    transition: color 0.3s ease;
+  }
+  
+  /* Description Color Change on Hover */
+  .requirement-item:hover .requirement-description,
+  .requirement-item:focus .requirement-description {
+    color: #666770; /* Changes the description color on hover/focus */
+  }
+
+  /* Responsive Design */
+@media (max-width: 768px) {
+  .eligibility-title {
+    font-size: 32px;
+  }
+
+  .eligibility-description {
+    font-size: 16px;
+  }
+
+  .requirements-list {
+    grid-template-columns: 1fr; /* Single-column layout for smaller screens */
+  }
+}
+
+  .faq-section {
+    background-color: #EEE !important;
+    padding: 112px 64px;
+  }
+  
+  .faq-container {
+    max-width: 768px;
+    margin: 0 auto;
+  }
+  
+  .faq-title {
+    font-size: 48px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 24px;
+    position: relative;
+  }
+  .faq-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(90deg, #FF4848, #6649F9);
+    margin: 8px auto 0;
+    transition: width 0.3s ease;
+  }
+  
+  .faq-title:hover::after {
+    width: 125px; /* Expands the gradient line on hover */
+  }
+  .faq-description {
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 80px;
+  }
+  
+  .faq-item {
+    border-top: 1px solid #000;
+  }
+  
+  .faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 20px 0;
+    background: none;
+    border: none;
+    text-align: left;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+  }
+  
+  .faq-icon {
+    transition: transform 0.3s ease;
+  }
+  
+  .faq-icon.open {
+    transform: rotate(180deg);
+  }
+  
+  .faq-answer {
+    padding-bottom: 24px;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  /* Responsive Design */
+@media (max-width: 768px) {
+  .faq-title {
+    font-size: 36px;
+  }
+
+  .faq-description {
+    font-size: 16px;
+  }
+
+  .faq-question {
+    font-size: 16px;
+  }
+
+  .faq-answer {
+    font-size: 14px;
+  }
+}
+
+.contact-section {
+  background-color: #222;
+  color: #fff;
+  text-align: center;
+  padding: 112px 64px;
+}
+
+.contact-content {
+  max-width: 560px;
+  margin: 0 auto;
+}
+
+.contact-title {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 8px;
+}
+
+.contact-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 3px;
+  background: linear-gradient(to right, #FF4848, #6649F9, #686770);
+  transition: width 0.3s ease;
+}
+
+.contact-title:hover::after {
+  width: 100%;
+}
+
+.contact-description {
+  font-size: 18px;
+  margin-bottom: 24px;
+}
+
+.btn-secondary-questions {
+  width: 120px;
+  padding: 12px 24px;
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: center;
+  transition: transform 0.3s ease, background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-secondary-questions:hover {
+  background-color: #fff;
+  color: #222;
+  transform: translateY(-3px);
+  border-color: #fff;
+  box-shadow: 0px 6px 12px rgba(255, 255, 255, 0.2);
+}
+
+@media (max-width: 768px) {
+  .contact-section {
+      padding: 80px 32px;
+  }
+
+  .contact-title {
+      font-size: 28px;
+  }
+
+  .contact-description {
+      font-size: 16px;
+  }
+
+  .btn-secondary-questions {
+      width: 100%;
+      padding: 12px 20px;
+      font-size: 14px;
+  }
+}

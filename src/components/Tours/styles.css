@@ -1,0 +1,335 @@
+* {
+  font-family: Ubuntu, sans-serif !important; /* Base font for readability */
+}
+
+/* Hero Section for Helicopter Tours */
+.hero-section-tours {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Full viewport height */
+  overflow: hidden;
+}
+
+.hero-background-tours {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  position: absolute;
+  top: -1000px;
+  left: 0;
+  z-index: -2;
+  filter: brightness(0.7);
+}
+/* Dark Overlay */
+.hero-section-tours::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4); /* Adjust for desired darkness */
+  z-index: -1; /* Sits above the background image */
+}
+.hero-content-tours {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  align-self: stretch;
+  max-width: 900px;
+  padding: 70px;
+  margin: 0 auto;
+  text-align: center;
+  color: #ffffff; 
+
+}
+
+.hero-tagline-tours {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.hero-heading-tours {
+  font-size: 56px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.hero-description-tours {
+  font-size: 18px;
+  font-style: normal;
+  margin-bottom: 30px;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+ .btn-book {
+  padding: 12px 24px; /* Increase padding for a larger button */
+  font-size: 1.1rem; /* Increase font size for visibility */
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.3s ease, opacity 0.3s ease;
+}
+
+
+.btn-book {
+  background-image: linear-gradient(to right, #F1C189, #FFA245);
+  color: #000;
+  border-radius: 10px;
+  border: none;
+}
+
+.btn-book:hover {
+  transform: scale(1.05); /* Slightly enlarges the button */
+  opacity: 0.95;
+}
+
+/* General Tour Card Styling */
+.tour-card {
+  display: flex;
+  width: 100%;
+  height: 750px;
+  max-width: 1300px;
+  background-color: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  padding: 120px 64px;
+  margin: 10px auto;
+  align-items: center;
+}
+
+.tour-card:nth-child(1),
+.tour-card:nth-child(3){
+  background-color: #EEE;
+}
+
+/* Black Background for the 2nd and 4th Tour Cards */
+.tour-card:nth-child(2),
+.tour-card:nth-child(4) {
+  background-color: #222;
+  color: #fff;
+}
+
+/* Image Styling */
+.tour-image {
+  width: 500px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-right: 80px;
+}
+
+/* Content Styling */
+.tour-content {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  flex: 1 0 0;
+}
+
+/* Title Styling */
+.tour-title {
+  font-size: 40px;
+  font-weight: 700;
+  max-width: 400px;
+  color: #000;
+}
+
+/* Adjusted Title for Dark Background */
+.tour-card:nth-child(2) .tour-title,
+.tour-card:nth-child(4) .tour-title {
+  color: #fff;
+}
+
+/* Description Styling */
+.tour-description {
+  font-size: 18px;
+  color: #000;
+  line-height: 27px;
+}
+
+/* Adjusted Description for Dark Background */
+.tour-card:nth-child(2) .tour-description,
+.tour-card:nth-child(4) .tour-description {
+  color: #fff;
+}
+
+/* Feature List Styling */
+.tour-features {
+  list-style: none;
+  align-items: flex-start;
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Feature Item Styling */
+.tour-feature {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  line-height: 24px;
+  color: #000;
+  gap: 16px;
+}
+
+/* Adjusted Feature Item and Icon for Dark Background */
+.tour-card:nth-child(2) .tour-feature,
+.tour-card:nth-child(4) .tour-feature {
+  color: #fff;
+}
+
+.tour-card:nth-child(2) .feature-icon,
+.tour-card:nth-child(4) .feature-icon {
+  filter: brightness(0) invert(1); /* Makes the icon white */
+}
+
+/* Book Button Styling */
+.btn-book-tour {
+  width: 120px;
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center; /* Horizontally center the text */
+  color: #222;
+  text-decoration: none;
+  background-color: #EEE;
+  border: 1px solid #000;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s ease;
+  margin-top: auto;
+  display: flex; /* Use flexbox for vertical centering */
+  justify-content: center; /* Horizontally center content */
+  align-items: center; /* Vertically center content */
+}
+
+
+.btn-book-tour:hover {
+  background-color: #e0e0e0; /* Slight darken on hover */
+}
+/* Call to Action Section Styling */
+.cta-tours {
+  display: flex;
+  align-items: center;
+  gap: 80px; /* Space between content and image */
+  padding: 112px 64px;
+  background-color: #EEE;
+  max-width: 1300px;
+  /* Removed text-align: center to prevent centering within .cta-content-tours */
+}
+
+/* CTA Text Content */
+.cta-content-tours {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align text to the left */
+  gap: 32px;
+  flex: 1 0 0;
+}
+
+/* CTA Title */
+.cta-title-tours {
+  font-size: 48px;
+  font-weight: 700;
+  color: #222;
+  text-align: left; /* Explicitly left-align text */
+}
+
+/* CTA Description */
+.cta-description-tours {
+  font-size: 18px;
+  line-height: 27px;
+  color: #222;
+  align-self: stretch;
+  text-align: left; /* Explicitly left-align text */
+}
+/* CTA Image */
+.cta-image-tours {
+  flex: 1;
+  width: 400px;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* CTA Button */
+.btn-large-tours {
+  padding: 16px 32px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+  background-color: #222;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn-large-tours:hover {
+  background-color: #333;
+  transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 991px) {
+  .hero-heading-tours {
+    font-size: 40px;
+  }
+
+  .hero-description-tours {
+    font-size: 16px;
+  }
+
+  .tour-card {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .cta-content-tours {
+    align-items: center;
+    text-align: center;
+  }
+
+  .cta-title-tours {
+    font-size: 28px;
+  }
+
+  .cta-description-tours {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-heading-tours {
+    font-size: 32px;
+  }
+
+  .tour-card {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-heading-tours {
+    font-size: 28px;
+  }
+
+  .btn-book, .btn-book-tour, .btn-large-tours {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+}

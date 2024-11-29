@@ -1,0 +1,350 @@
+/* Hero Section */
+body {
+    font-family: Ubuntu, sans-serif !important; /* Base font for readability */
+  }
+  
+.hero-latest-news {
+    position: relative;
+    top: -30px;
+    width: 100%;
+    height: 520px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    text-align: center;
+    color: #eee;
+  }
+  
+  .hero-bg-latest-news {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    object-fit: cover;
+    z-index: 1;
+    filter: brightness(70%) ; /* Slight dimming and blur for better text visibility */
+  }
+
+  .hero-content-latest-news {
+    position: relative;
+    z-index: 2; /* Above the background */
+    max-width: 600px;
+    text-align: center;
+  }
+  
+  .hero-tag-latest-news {
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 600;
+    color: #eee;
+    padding: 6px 12px;
+
+  }
+  
+  .hero-title-latest-news {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #eee;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .hero-latest-news {
+      height: 300px;
+    }
+  
+    .hero-title-latest-news {
+      font-size: 36px;
+    }
+  
+    .hero-tag-latest-news {
+      font-size: 16px;
+    }
+  }
+  
+
+  /* Blog Section */
+.blog-section-latest-news {
+    background-color: #eee;
+    padding: 60px 40px;
+    text-align: center;
+  }
+  
+  .section-header-latest-news {
+    margin-bottom: 40px;
+  }
+  
+  .section-tag-latest-news {
+    display: inline-block;
+    color: #222;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 5px 10px;
+    margin-bottom: 16px;
+  }
+  
+  .section-title-latest-news {
+    font-size: 36px;
+    font-weight: 700;
+    color: #222;
+    margin-bottom: 16px;
+  }
+  
+  .section-description-latest-news {
+    font-size: 18px;
+    color: #222;
+    margin-bottom: 70px;
+
+  }
+  
+  .blog-grid-latest-news {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    justify-content: center;
+  }
+  
+  .section-actions-latest-news {
+    margin-top: 40px;
+  }
+  
+  .btn-latest-news {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .btn-secondary-blog-latest-news {
+    background: transparent;
+    color: #222;
+    border: 2px solid #222;
+  }
+  
+  .btn-secondary-blog-latest-news:hover {
+    background: #222;
+    color: #eee;
+  }
+  
+  /* Blog Card */
+  .blog-card {
+    border-radius: 16px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+  
+  .blog-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  .card-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .card-content {
+    padding: 20px;
+    text-align: left;
+  }
+  
+  .card-category {
+    display: inline-block;
+    color: #222;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 4px 10px;
+    margin-bottom: 12px;
+  }
+  
+  .card-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #222;
+    margin-bottom: 12px;
+    line-height: 1.4;
+  }
+  
+  .card-excerpt {
+    font-size: 16px;
+    color: #222;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    height: 120px;
+  }
+  
+  .card-footer {
+    display: flex;
+    align-items: center;
+    padding: 16px 20px;
+  }
+  
+  .author-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 12px;
+  }
+  
+  .author-info {
+    text-align: left;
+  }
+  
+  .author-name {
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+  }
+  
+  .post-meta {
+    font-size: 12px;
+    color: #999;
+  }
+  
+  .post-meta .separator {
+    margin: 0 6px;
+  }
+  
+  /* Testimonial Section */
+.testimonial-section-latest-news {
+    position: relative;
+    background-color: #222;
+    padding: 60px 20px;
+    text-align: center;
+    overflow: hidden;
+    bottom: -40px;
+  }
+  
+  /* Testimonial Container */
+  .testimonial-container-latest-news {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 30px;
+    position: relative;
+  }
+  
+  /* Testimonial Content */
+  .testimonial-content-latest-news {
+    font-style: italic;
+  }
+  
+  .testimonial-quote-latest-news {
+    font-size: 20px;
+    color: #eee;
+    margin-bottom: 30px;
+    line-height: 1.8;
+    position: relative;
+  }
+  
+
+  /* Author Info */
+  .testimonial-author-latest-news {
+    margin-top: 20px;
+  }
+  
+  .author-info-latest-news {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .author-name-latest-news {
+    font-size: 18px;
+    font-weight: 700;
+    color: #eee;
+  }
+  
+  .author-title-latest-news {
+    font-size: 14px;
+    color: #eee;
+    margin-top: 4px;
+  }
+  
+  /* Slider Controls */
+  .slider-controls-latest-news {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+  }
+  
+  .slider-dot-latest-news {
+    width: 12px;
+    height: 12px;
+    background-color: #ddd;
+    border-radius: 50%;
+    border: 0px solid transparent;
+    margin: 0 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .slider-dot-latest-news.active {
+    background-color: #FFB266;
+  }
+  
+  /* Slider Buttons */
+  .slider-button-latest-news {
+    position: absolute;
+    top: 50%;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #eee;
+    border-radius: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    background: transparent;
+  }
+  
+  .slider-button-latest-news img {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .slider-button-latest-news:hover {
+    transform: translateY(-50%) scale(1.1);
+  }
+  
+  .slider-button-latest-news.prev {
+    left: 20px;
+  }
+  
+  .slider-button-latest-news.next {
+    right: 20px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .testimonial-container-latest-news {
+      padding: 30px 20px;
+    }
+  
+    .testimonial-quote-latest-news {
+      font-size: 18px;
+    }
+  
+    .author-name-latest-news {
+      font-size: 16px;
+    }
+  
+    .slider-button-latest-news {
+      width: 30px;
+      height: 30px;
+    }
+  
+    .slider-button-latest-news img {
+      width: 16px;
+      height: 16px;
+    }
+  }
+  

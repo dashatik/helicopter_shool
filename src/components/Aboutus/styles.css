@@ -1,0 +1,1268 @@
+* {
+  font-family: Ubuntu, sans-serif !important; /* Base font for readability */
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 550px; /* Adjust height as needed */
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Background Image Styling */
+.hero-background {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -2;
+  transition: transform 0.3s ease;
+}
+
+.hero:hover .hero-background {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+/* Dark Overlay for Text Contrast */
+.hero::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4); /* Adjust darkness */
+  z-index: -1; /* Above image but below text */
+  transition: background-color 0.3s ease;
+}
+
+.hero:hover::after {
+  background-color: rgba(0, 0, 0, 0.6); /* Darkens overlay on hover */
+}
+
+/* Centered Content */
+.hero-content {
+  position: relative;
+  color: #ffffff;
+  text-align: center;
+  z-index: 1;
+  max-width: 700px;
+  padding: 20px;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.hero:hover .hero-content {
+  opacity: 0.9; /* Fades content slightly on hover for a dynamic feel */
+}
+
+/* Title Styling */
+.hero-title {
+  font-size: 3rem; /* Adjust size for responsiveness */
+  font-weight: bold;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  transition: color 0.3s ease;
+}
+
+.hero:hover .hero-title {
+  color: #FFB266; /* Adds a gold hue to the title on hover */
+}
+
+/* Description Styling */
+.hero-description {
+  font-size: 1.25rem; /* Slightly larger for readability */
+  line-height: 1.6;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.hero:hover .hero-description {
+  transform: translateY(-5px); /* Moves up slightly on hover */
+  color: #f9f9f9; /* Adds a warm hue to the description on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 991px) {
+  .hero {
+    height: 450px; /* Reduced height for medium screens */
+  }
+
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .hero-description {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    height: 400px; /* Reduced height for small screens */
+  }
+
+  .hero-content {
+    padding: 10px;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .hero-description {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero {
+    height: 350px; /* Compact height for extra small screens */
+  }
+
+  .hero-title {
+    font-size: 1.8rem;
+  }
+
+  .hero-description {
+    font-size: 0.9rem;
+  }
+}
+
+/* Mission & Vision Section */
+.mission-vision {
+  display: flex;
+  flex-wrap: wrap; /* Ensures layout adjusts for smaller screens */
+  width: 100%;
+  height: auto; /* Dynamic height for responsiveness */
+  padding: 0;
+  background-color: #f9fafb;
+}
+
+/* Left Part (Black Background for Description) */
+.mission-vision-content {
+  flex: 1;
+  background-color: #222; /* Black background for left part */
+  color: #fff; /* White text */
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 250px; /* Ensures proper spacing on smaller screens */
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.mission-vision-content:hover {
+  background-color: #333; /* Darker background on hover */
+  transform: scale(1.02); /* Slight zoom effect on hover */
+}
+
+.section-description-vision {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #ddd; /* Light gray for better readability */
+  text-align: left;
+  max-width: 600px;
+  transition: color 0.3s ease;
+}
+
+.mission-vision-content:hover .section-description-vision {
+  color: #fff; /* Brightens text on hover */
+}
+
+/* Right Part (White Background for Title) */
+.mission-vision-title {
+  flex: 1;
+  background-color: #eee; /* White background for title */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  min-height: 250px; /* Ensures proper spacing on smaller screens */
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.mission-vision-title:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Adds depth with a shadow on hover */
+  transform: translateY(-5px); /* Moves slightly upward on hover */
+}
+
+.section-title-vision {
+  font-size: 40px;
+  font-weight: 600;
+  color: #333; /* Dark color for contrast on white */
+  text-align: center;
+  position: relative;
+  display: inline-block;
+}
+
+.section-title-vision::after {
+  content: '';
+  display: block;
+  width: 50%;
+  height: 3px;
+  background: linear-gradient(to right, #FF4848, #6649F9); /* Gradient line under title */
+  margin: 10px auto 0;
+  transition: width 0.3s ease;
+}
+
+.mission-vision-title:hover .section-title-vision::after {
+  width: 80%; /* Expands gradient line on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .mission-vision {
+    flex-direction: column; /* Stack the sections vertically */
+  }
+
+  .mission-vision-content,
+  .mission-vision-title {
+    padding: 20px; /* Reduce padding for smaller screens */
+    text-align: center; /* Center-align text on smaller devices */
+  }
+
+  .section-title-vision {
+    font-size: 28px; /* Smaller font size for better fit */
+  }
+
+  .section-description-vision {
+    font-size: 16px; /* Adjust font size for readability */
+  }
+}
+
+@media (max-width: 480px) {
+  .mission-vision-content,
+  .mission-vision-title {
+    padding: 16px; /* Further reduced padding for very small screens */
+  }
+
+  .section-title-vision {
+    font-size: 24px; /* Further reduction in title font size */
+  }
+
+  .section-description-vision {
+    font-size: 14px; /* Smaller text for compact screens */
+    line-height: 1.4;
+  }
+}
+
+
+/* Core Values Section Layout */
+.core-values {
+  position: relative;
+  padding: 80px 64px;
+  background-color: #EEE;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Container for Core Values Content and Decorative Image */
+.container-values {
+  display: flex;
+  gap: 50px;
+  max-width: 1200px;
+  width: 100%;
+  align-items: center;
+}
+
+/* Decorative Image on the Left */
+.decorative-image-values {
+  width: 300px;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Core Values Section */
+.core-values {
+  display: flex;
+  padding: 80px 20px;
+  background-color: #eee; /* Light background for contrast */
+  position: relative;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+/* Left Decorative Image */
+.decorative-image-values {
+  width: 45%; /* Occupies a third of the width */
+  object-fit: cover;
+  display: block;
+  margin-right: 10px; /* Space between image and content */
+  align-self: center; /* Vertically centers the image */
+}
+
+/* Right Content Block */
+.content-values {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px; /* Space between title and value items */
+}
+
+.section-title-values {
+  font-size: 40px;
+  font-weight: 700;
+  color: #000;
+  text-align: left;
+  position: relative;
+}
+
+.section-title-values::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(to right, #FF4848, #6649F9);
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+
+.section-title-values:hover::after {
+  width: 100%; /* Expands gradient line on hover */
+}
+/* Core Values Cards */
+.values-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two-column grid */
+  width: 100%;
+}
+
+.value-item {
+  display: flex;
+  margin: 5px;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 300px;
+    background-color: #FFF;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animation for hover effects */
+    cursor: pointer;
+}
+
+.value-item:hover {
+  transform: translateY(-10px); /* Lift on hover */
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.value-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #000;
+}
+
+.value-description {
+  font-size: 16px;
+  color: #000;
+  line-height: 27px;
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container-values {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center;
+  }
+
+  .decorative-image-values {
+    width: 80%; /* Reduce image size */
+    margin-bottom: 20px; /* Add spacing below image */
+  }
+
+  .section-title-values {
+    font-size: 32px; /* Adjust title size */
+  }
+
+  .values-list {
+    grid-template-columns: 1fr; /* Single-column layout */
+  }
+}
+
+/* Credentials Section Layout */
+.credentials {
+  display: flex;
+  justify-content: center;
+  padding: 80px 20px;
+  background-color: #222;
+  position: relative;
+  margin: 0 auto;
+}
+
+/* Container for Main Content */
+.container-cred {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 1300px;
+  max-width: 1200px;
+  text-align: left;
+  gap: 80px;
+  flex-shrink: 0;
+  position: relative;
+}
+
+/* Content Area */
+.content-cred {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 20px;
+}
+
+/* Section Title */
+.section-title-cred {
+  font-size: 40px;
+  font-weight: 700;
+  color: #fff;
+  text-align: left;
+  line-height: 48px;
+  transition: color 0.3s ease;
+}
+
+.section-title-cred:hover {
+  color: #f8c471; /* Subtle highlight color on hover */
+}
+
+/* Section Description */
+.section-description-cred {
+  font-size: 18px;
+  color: #fff;
+  line-height: 27px;
+  max-width: 1000px;
+  font-style: italic;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.section-description-cred:hover {
+  color: #f7dc6f; /* Slight color change for emphasis */
+}
+
+/* Credential Item Styling */
+.credential-item {
+  background-color: #333;
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 5px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.credential-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  background-color: #444; /* Slightly lighter on hover for contrast */
+}
+
+/* Credential Title */
+.credential-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #fff;
+  line-height: 41px;
+  transition: color 0.3s ease;
+}
+
+
+
+/* Credential Description */
+.credential-description {
+  font-size: 18px;
+  color: #fff;
+  line-height: 27px;
+  transition: color 0.3s ease;
+}
+
+
+/* Decorative Images */
+.decorative-image-1-cred,
+.decorative-image-2-cred {
+  position: absolute;
+  opacity: 1;
+}
+
+.decorative-image-1-cred {
+  top: 900px;
+  left: 82px;
+  width: 500px;
+}
+
+.decorative-image-1-cred:hover {
+  transform: scale(1.30);
+}
+
+.decorative-image-2-cred {
+  top: 900px;
+  left: 690px;
+  width: 556px;
+}
+.decorative-image-2-cred:hover {
+  transform: scale(1.30) translateX(-55px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container-cred {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .decorative-image-1-cred,
+  .decorative-image-2-cred {
+    display: none; /* Hide decorative images on smaller screens */
+  }
+
+  .section-title-cred {
+    font-size: 32px;
+    text-align: center;
+  }
+
+  .section-description-cred {
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .credential-item {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+/* Overall Layout for History Section */
+.history {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 112px 50px;
+  background-color: #EEE;
+}
+
+/* Split Layout Container */
+.history .container {
+  display: flex;
+  max-width: 1300px;
+  width: 100%;
+}
+
+/* Left Side - Text Content */
+.history .content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: none; /* Reduced gap between elements */
+  padding-right: 30px; /* Added padding to separate from the image */
+}
+
+.section-header {
+  margin-bottom: none;
+  margin-bottom: -5px !important;
+}
+
+.tagline {
+  font-size: 16px;
+  font-weight: 600;
+  color: #000;
+}
+
+.section-title {
+  font-size: 48px;
+  font-weight: 700;
+  color: #000;
+
+}
+
+.section-description {
+  font-size: 18px;
+  color: #000;
+  line-height: 27px;
+  margin-bottom: -5px !important; /* Reduced margin for closer spacing */
+}
+
+.history-text,
+.commitment-text {
+  font-size: 18px;
+  line-height: 27px;
+  color: #000;
+  margin-bottom: 10px; /* Reduced spacing for closer text grouping */
+}
+
+.subsection-title {
+  font-size: 30px;
+  font-weight: 700;
+  color: #000;
+  margin-top: 20px;
+}
+
+/* Right Side - Image Section */
+.history .image-container {
+  flex: 1;
+  background-color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.history-image {
+  max-width: 50%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px !important;
+}
+
+@media (max-width: 768px) {
+  .history {
+    padding: 80px 20px;
+  }
+
+  .section-title {
+    font-size: 28px;
+  }
+
+  .history-image {
+    max-width: 100%; /* Full width image on smaller screens */
+  }
+}
+
+@media (max-width: 576px) {
+  .history {
+    padding: 60px 15px;
+  }
+
+  .section-title {
+    font-size: 24px;
+  }
+
+  .section-description,
+  .history-text,
+  .commitment-text {
+    font-size: 14px;
+  }
+
+  .history-image {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+/* Overall Team Section */
+.team {
+  padding: 100px 20px;
+  background-color: #222;
+  text-align: center;
+  gap: 24px;
+}
+
+/* Section Header */
+.section-header-team {
+  margin-bottom: 50px;
+}
+
+.tagline-team {
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.section-title-team {
+  font-size: 48px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.section-title-team::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -8px;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(to right, #FF4848, #6649F9);
+  transition: width 0.3s ease;
+}
+
+.section-title-team:hover::after {
+  width: 240px;
+}
+
+.section-description-team {
+  font-size: 18px;
+  color: #fff;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+
+/* Team Grid */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+  justify-items: center;
+  align-items: start;
+  margin-top: 40px;
+}
+
+/* Team Member Card */
+.team-member {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-member:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Profile Image */
+.member-image {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease;
+}
+
+.team-member:hover .member-image {
+  transform: scale(1.1);
+}
+
+/* Member Information */
+.member-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+}
+
+.member-name {
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+}
+
+.member-position {
+  font-size: 18px;
+  font-weight: 400;
+  color: #555;
+}
+
+.member-description {
+  font-size: 16px;
+  color: #666;
+  line-height: 24px;
+}
+
+/* Social Links */
+.social-links {
+  display: flex;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.social-links a {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  transition: transform 0.3s ease;
+}
+
+.social-links a:hover {
+  transform: scale(1.3);
+}
+
+.social-links img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Responsive Design */
+@media (max-width: 991px) {
+  .section-title-team {
+    font-size: 36px;
+  }
+
+  .team-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+
+  .member-name {
+    font-size: 18px;
+  }
+
+  .member-position {
+    font-size: 16px;
+  }
+
+  .member-description {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 576px) {
+  .team {
+    padding: 50px 15px;
+  }
+
+  .section-title-team {
+    font-size: 28px;
+  }
+
+  .team-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+  }
+
+  .member-image {
+    width: 100px;
+    height: 100px;
+  }
+
+  .member-description {
+    font-size: 13px;
+  }
+}
+
+/* Adjusted Overall Layout for Why Choose Us Section */
+.why-choose-us {
+  position: relative;
+  padding: 112px 64px;
+  background-color: #EEE;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Content Area - Aligned to the Top */
+.content-why {
+  display: flex;
+  gap: 40px; /* Space between the two boxes */
+  margin-bottom: 40px; /* Space below the header section */
+  width: 100%;
+}
+
+/* Left Column - Tagline and Title */
+.header-left {
+  flex: 1;
+  padding: 20px;
+}
+
+.tagline-why {
+  font-size: 14px;
+  font-weight: 600;
+  color: #222;
+}
+
+.section-title-why {
+  font-size: 48px;
+  font-weight: 700;
+  color: #000;
+  line-height: 1.3;
+  margin-top: 10px;
+  width: 600px;
+  position: relative;
+}
+/* Gradient Line Under Title */
+.section-title-why::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -10px;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(to right, #FF4848, #6649F9);
+  transition: width 0.3s ease;
+}
+
+.section-title-why:hover::after {
+  width: 100%;
+}
+/* Right Column - Description */
+.header-right {
+  display: flex;
+  flex: 1;
+  color: #000 !important; /* White text */
+  padding: 40px;
+  justify-content: center;
+  align-items: center;
+}
+
+.section-description-why {
+  font-size: 18px;
+  line-height: 27px;
+  text-align: left;
+  max-width: 700px;
+}
+
+
+/* Reasons Section */
+/* Reasons Container */
+.reasons-container {
+  margin-top: 50px;
+  align-items: flex-start;
+  max-width: 1100px;
+  align-self: stretch;
+}
+
+/* Reasons Title */
+.reasons-title {
+  font-size: 48px;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 20px;
+}
+
+/* Reason Item Interactivity */
+.reason-item {
+  padding: 20px;
+  margin-bottom: 20px;
+  background-color: #f9f9f9; /* Light background color */
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.reason-item:hover {
+  transform: translateY(-5px); /* Slight lift on hover */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15); /* Darker shadow on hover */
+}
+
+/* Reason Title */
+.reason-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* Reason Description */
+.reason-description {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.5;
+}
+
+/* Fade-in Animation for the Container */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.reasons-container {
+  opacity: 0; /* Initial opacity for animation */
+  animation: fadeIn 0.8s ease-out forwards; /* Fade-in effect */
+  animation-delay: 0.2s; /* Delay for better effect */
+}
+
+
+/* Decorative Image Positioned Between Content Sections */
+.placeholder-video-chooseus {
+  width: 100%;
+  max-width: 1200px;
+  height: 400px;
+  margin: 40px 0; /* Spacing above and below image */
+  border-radius: 8px;
+  object-fit: cover;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.placeholder-video-chooseus:hover {
+  transform: scale(1.03); /* Slight scale effect */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Shadow on hover */
+}
+/* Responsive Design */
+@media (max-width: 991px) {
+  .section-title-why {
+    font-size: 32px;
+  }
+
+  .section-description-why {
+    font-size: 16px;
+  }
+
+  .placeholder-video-chooseus {
+    height: 300px; /* Adjust image height */
+  }
+}
+
+@media (max-width: 768px) {
+  .reasons-container {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjust grid for smaller screens */
+  }
+
+  .reason-item {
+    text-align: center; /* Center-align text for smaller cards */
+  }
+}
+
+@media (max-width: 576px) {
+  .section-title-why {
+    font-size: 28px;
+  }
+
+  .placeholder-video-chooseus {
+    height: 250px;
+  }
+
+  .section-description-why {
+    font-size: 14px;
+  }
+}
+/* Overall Contact Section Layout */
+.contact {
+  display: flex;
+  justify-content: center;
+  padding: 80px 20px;
+  background-color: #f9f9f9; /* Light background color */
+}
+
+/* Container to Align Content */
+.container {
+  display: flex;
+  max-width: 1200px;
+  width: 100%;
+  gap: 50px; /* Space between the contact info and form */
+}
+
+/* Contact Info Section */
+.contact-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* Section Header Styling */
+.section-header {
+  margin-bottom: 20px;
+}
+
+.tagline {
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+}
+
+.section-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #222;
+}
+
+.section-description {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.5;
+}
+
+/* Overall Contact Section Layout */
+.contact {
+  display: flex;
+  justify-content: center;
+  padding: 112px 64px;
+  background-color: #222; /* Adjusted light background for better contrast */
+}
+
+/* Container to Align Content */
+.container-contact {
+  display: flex;
+  max-width: 1300px;
+  width: 100%;
+  gap: 80px; /* Space between the contact info and form */
+}
+
+/* Contact Info Section */
+.contact-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  background-color: #222; /* Dark background as per SVG */
+  padding: 40px;
+  border-radius: 8px;
+  color: #fff; /* White text for contrast */
+}
+
+/* Section Header Styling */
+.section-header-contact {
+  margin-bottom: 20px;
+  align-items: flex-start;
+}
+
+.tagline-contact {
+  font-size: 16px;
+  font-weight: 600;
+  font-style: normal;
+  color: #fff; /* Lighter text for tagline */
+}
+
+.section-title-contact {
+  font-size: 36px;
+  font-weight: 700;
+  color: #fff; /* White text for the title */
+}
+
+.section-description-contact {
+  font-size: 16px;
+  color: #fff; /* Lighter text color for description */
+  line-height: 1.5;
+}
+
+/* Contact Details Styling */
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.contact-icon {
+  width: 24px;
+  height: 24px;
+  filter: brightness(0) invert(1); /* Ensure icons are visible on dark background */
+}
+
+.contact-link {
+  font-size: 16px;
+  color: #ffff; /* Accent color for link text */
+  text-decoration: none;
+}
+
+.contact-address {
+  font-size: 16px;
+  color: #fff; /* Lighter color for the address */
+}
+
+/* Contact Form Styling */
+.contact-form {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 40px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-label {
+  font-size: 14px;
+  color: #fff;
+  margin-bottom: 5px;
+}
+
+.form-input, .form-textarea {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+  color: #999;
+  transition: border-color 0.3s;
+}
+
+.form-input:focus, .form-textarea:focus {
+  border-color: #007bff;
+}
+
+.form-textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.checkbox-container {
+  display: flex;
+  justify-content: flex-start;
+  width: 300px ;
+  margin-top: auto; /* Positions it at the bottom of the form */
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #555;
+}
+
+.btn-primary-contact {
+  padding: 12px 24px;
+  background-image: #fff;
+  width: 99px;
+  color: #000;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-primary-contact:hover {
+  background-color: #fff; /* Slightly darker on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 991px) {
+  .container-contact {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-info, .contact-form {
+    width: 100%;
+  }
+}
+@media (max-width: 576px) {
+  .section-title-contact {
+    font-size: 24px;
+  }
+
+  .section-description-contact {
+    font-size: 14px;
+  }
+
+  .btn-primary-contact {
+    width: 100%; /* Full-width button for small screens */
+  }
+}
