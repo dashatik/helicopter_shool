@@ -4,7 +4,6 @@ import './styles.css';
 const DropdownMenu = () => {
   return (
     <div className="dropdown-menu">
-      {/* Training Modules Column */}
       <div className="dropdown-column">
         <h3 className="dropdown-heading">Training Modules</h3>
         <ul className="dropdown-list">
@@ -45,8 +44,6 @@ const DropdownMenu = () => {
           </li>
         </ul>
       </div>
-
-      {/* General Section */}
       <div className="dropdown-column">
         <h3 className="dropdown-heading">General</h3>
         <ul className="dropdown-list">
@@ -76,8 +73,6 @@ const DropdownMenu = () => {
           </li>
         </ul>
       </div>
-
-      {/* Latest News Section */}
       <div className="latest-news">
         <h3 className="dropdown-heading">Latest News</h3>
         <div className="news-item">

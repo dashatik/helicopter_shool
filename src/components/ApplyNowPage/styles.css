@@ -22,7 +22,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(50, 50, 50, 0.8));
+  background: linear-gradient(to bottom, rgb(0 0 0 / 50%), rgb(50 50 50 / 80%));
   z-index: 1; /* Overlay on top of background but beneath content */
   pointer-events: none;
 }
@@ -80,7 +80,7 @@
 }
 
 /* Responsive Design */
-@media (max-width: 991px) {
+@media (width <= 991px) {
   .header-title-apply {
     font-size: 36px;
   }
@@ -90,7 +90,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (width <= 768px) {
   .header-apply {
     height: auto; /* Allow height to adjust for smaller screens */
     padding: 60px 20px;
@@ -106,7 +106,7 @@
 }
 
 
-/*ApplicationProcess*/
+/* ApplicationProcess */
 .application-process {
   background-color: #eee;
   padding: 112px 64px;
@@ -129,7 +129,7 @@
 
 .process-header {
   margin-bottom: 20px;
-  width: 700px;
+  width: auto;
 }
 
 .process-tagline {
@@ -190,6 +190,7 @@
 .timeline-icon img {
   transition: transform 0.3s ease; /* Smooth transition for the hover effect */
 }
+
 .timeline-icon img:hover {
   transform: scale(1.1); /* Slightly enlarge the icon on hover */
 }
@@ -216,12 +217,14 @@
 }
 
 /* Responsive Design */
-@media (max-width: 991px) {
+@media (width <= 991px) {
   .process-content {
     flex-direction: column;
     gap: 40px;
   }
-
+  .process-decoration {
+    display: none;
+  }
   .process-title {
     font-size: 28px;
   }
@@ -229,6 +232,7 @@
   .timeline-item {
     flex-direction: column;
     align-items: flex-start;
+ 
   }
 
   .timeline-divider {
@@ -236,7 +240,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (width <= 768px) {
   .process-content {
     gap: 20px;
   }
@@ -244,7 +248,9 @@
   .process-title {
     font-size: 24px;
   }
-
+  .process-decoration {
+    display: none;
+  }
   .timeline-step {
     font-size: 18px;
   }
@@ -338,7 +344,6 @@ fieldset .radio-option-container {
 .checkbox-group {
   display: flex;
   align-items: center !important;
-  gap: 8px;
   margin-bottom: 24px;
   width: 800px;
   gap: 24px; 
@@ -348,7 +353,15 @@ fieldset .radio-option-container {
   width: auto;
   margin-top: 20px;
 }
+.form-group-checkbox-group {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Space between the checkbox and label */
+}
 
+.form-group-checkbox-group input[type="checkbox"] {
+  margin: 0; /* Remove default margin of checkbox */
+}
 /* Centered Submit Button Container */
 .button-container-form {
   display: flex;
@@ -376,7 +389,7 @@ fieldset .radio-option-container {
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
+@media (width <= 768px) {
   .form-title {
     font-size: 28px;
   }
@@ -462,11 +475,6 @@ fieldset .radio-option-container {
     line-height: 1.5;
   }
   
-  @media (max-width: 768px) {
-    .requirements-list {
-      grid-template-columns: 1fr; /* Stacks into a single column on smaller screens */
-    }
-  }
   .requirement-item {
     flex: 1;
     background-color: #fff;
@@ -481,7 +489,7 @@ fieldset .radio-option-container {
   .requirement-item:hover,
   .requirement-item:focus {
     transform: translateY(-8px); /* Lifts the item on hover */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Adds shadow for depth */
+    box-shadow: 0 8px 20px rgb(0 0 0 / 15%); /* Adds shadow for depth */
   }
   
   .requirement-title {
@@ -509,20 +517,66 @@ fieldset .radio-option-container {
     color: #666770; /* Changes the description color on hover/focus */
   }
 
-  /* Responsive Design */
-@media (max-width: 768px) {
-  .eligibility-title {
-    font-size: 32px;
+  @media (max-width: 1200px) {
+    .requirements-list {
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+  
+    .requirement-item {
+      flex: 0 0 48%; /* Two items per row with a small gap */
+      margin-bottom: 24px;
+    }
   }
-
-  .eligibility-description {
-    font-size: 16px;
+  
+  @media (max-width: 991px) {
+    .requirements-list {
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+  
+    .requirement-item {
+      flex: 0 0 48%; /* Two items per row */
+      margin-bottom: 24px;
+    }
   }
-
-  .requirements-list {
-    grid-template-columns: 1fr; /* Single-column layout for smaller screens */
+  
+  @media (max-width: 767px) {
+    .requirements-list {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .requirement-item {
+      flex: 0 0 100%; /* One item per row */
+      margin-bottom: 24px;
+    }
   }
-}
+  
+  @media (max-width: 480px) {
+    .eligibility-section {
+      padding: 80px 16px; /* Adjust padding for smaller screens */
+    }
+  
+    .eligibility-title {
+      font-size: 28px; /* Smaller title font size */
+    }
+  
+    .eligibility-description {
+      font-size: 14px; /* Smaller description font size */
+    }
+  
+    .requirements-list {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .requirement-item {
+      flex: 0 0 100%; /* One item per row */
+      margin-bottom: 16px;
+    }
+  }
+  
 
   .faq-section {
     background-color: #EEE !important;
@@ -541,6 +595,7 @@ fieldset .radio-option-container {
     margin-bottom: 24px;
     position: relative;
   }
+
   .faq-title::after {
     content: '';
     display: block;
@@ -554,6 +609,7 @@ fieldset .radio-option-container {
   .faq-title:hover::after {
     width: 125px; /* Expands the gradient line on hover */
   }
+
   .faq-description {
     font-size: 18px;
     text-align: center;
@@ -592,7 +648,7 @@ fieldset .radio-option-container {
     line-height: 1.5;
   }
   /* Responsive Design */
-@media (max-width: 768px) {
+@media (width <= 768px) {
   .faq-title {
     font-size: 36px;
   }
@@ -671,10 +727,10 @@ fieldset .radio-option-container {
   color: #222;
   transform: translateY(-3px);
   border-color: #fff;
-  box-shadow: 0px 6px 12px rgba(255, 255, 255, 0.2);
+  box-shadow: 0 6px 12px rgb(255 255 255 / 20%);
 }
 
-@media (max-width: 768px) {
+@media (width <= 768px) {
   .contact-section {
       padding: 80px 32px;
   }

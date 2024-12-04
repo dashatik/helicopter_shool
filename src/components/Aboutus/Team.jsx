@@ -45,9 +45,9 @@ const Team = () => {
               <p className="member-description">{member.description}</p>
             </div>
             <div className="social-links">
-              <a href="#" aria-label={`${member.name}'s LinkedIn`}><img src="https://cdn.builder.io/api/v1/image/assets/536a8b606864400fab194975c3b1e353/87ec53ece447b3ae9f6e9f06db93c5ac976c08b25cd66b0b4bed7aa0afb5c6f0?apiKey=536a8b606864400fab194975c3b1e353&" alt="" /></a>
-              <a href="#" aria-label={`${member.name}'s Twitter`}><img src="https://cdn.builder.io/api/v1/image/assets/536a8b606864400fab194975c3b1e353/b1332e40c061482067062bfab80c125f3ae26fa5c3731b55424bf3b58522d3e0?apiKey=536a8b606864400fab194975c3b1e353&" alt="" /></a>
-              <a href="#" aria-label={`${member.name}'s Facebook`}><img src="https://cdn.builder.io/api/v1/image/assets/536a8b606864400fab194975c3b1e353/0422d869d172f76989d9fccd2f594bcc62b0030b7baa7377449993994ec97309?apiKey=536a8b606864400fab194975c3b1e353&" alt="" /></a>
+              <a href="https://www.linkedin.com/in/dariatikhomirova" aria-label={`${member.name}'s LinkedIn`}><img src="https://cdn.builder.io/api/v1/image/assets/536a8b606864400fab194975c3b1e353/87ec53ece447b3ae9f6e9f06db93c5ac976c08b25cd66b0b4bed7aa0afb5c6f0?apiKey=536a8b606864400fab194975c3b1e353&" alt="" /></a>
+              <a href="https://www.linkedin.com/in/dariatikhomirova" aria-label={`${member.name}'s Twitter`}><img src="https://cdn.builder.io/api/v1/image/assets/536a8b606864400fab194975c3b1e353/b1332e40c061482067062bfab80c125f3ae26fa5c3731b55424bf3b58522d3e0?apiKey=536a8b606864400fab194975c3b1e353&" alt="" /></a>
+              <a href="https://www.linkedin.com/in/dariatikhomirova" aria-label={`${member.name}'s Facebook`}><img src="https://cdn.builder.io/api/v1/image/assets/536a8b606864400fab194975c3b1e353/0422d869d172f76989d9fccd2f594bcc62b0030b7baa7377449993994ec97309?apiKey=536a8b606864400fab194975c3b1e353&" alt="" /></a>
             </div>
           </div>
         ))}

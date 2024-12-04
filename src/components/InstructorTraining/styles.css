@@ -99,7 +99,7 @@
   background-color: #000;
   color: #fff;
   transform: translateY(-2px);
-  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 16px rgb(0 0 0 / 20%);
 }
 
 /* Secondary Button */
@@ -114,7 +114,7 @@
   color: #fff;
   border: 1px solid #000;
   transform: translateY(-2px);
-  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 16px rgb(0 0 0 / 20%);
 }
 
 /* Large Button */
@@ -124,7 +124,7 @@
 }
 
 /* Responsive Design */
-@media (max-width: 991px) {
+@media (width <= 991px) {
   .hero-section-instructor {
     padding: 80px 32px;
     height: auto; /* Adjust height for smaller screens */
@@ -141,6 +141,11 @@
   .hero-actions-instructor {
     flex-direction: column;
     gap: 16px;
+  }
+
+  .btn-instructor {
+    width: 200px;
+    align-self: center;
   }
 }
 
@@ -217,7 +222,7 @@
   width: 100%;
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgb(0 0 0 / 10%);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   opacity: 0;
   transform: translateY(30px);
@@ -245,7 +250,7 @@
 .benefit-item-instructor:hover,
 .benefit-item-instructor:focus-within {
   transform: translateY(-5px);
-  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 6px 12px rgb(0 0 0 / 20%);
 }
 
 /* Benefit Icon */
@@ -295,6 +300,7 @@
     opacity: 0;
     transform: translateY(30px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -302,7 +308,7 @@
 }
 
 /* Responsive Design */
-@media (max-width: 991px) {
+@media (width <= 991px) {
   .why-become-instructor {
     flex-direction: column;
     text-align: center;
@@ -410,7 +416,7 @@
 
 .feature-item-details-instructor:hover {
   transform: translateY(-3px);
-  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 6px 12px rgb(0 0 0 / 10%);
 }
 
 /* Feature Icon */
@@ -488,7 +494,7 @@
   height: auto;
   border-radius: 8px;
   object-fit: cover;
-  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 16px rgb(0 0 0 / 10%);
   transition: transform 0.5s ease, opacity 0.5s ease;
 }
 
@@ -503,6 +509,7 @@
     opacity: 0;
     transform: translateY(30px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -510,7 +517,7 @@
 }
 
 /* Responsive Design */
-@media (max-width: 991px) {
+@media (width <= 991px) {
   .course-details-instructor {
     flex-direction: column;
     text-align: center;
@@ -521,8 +528,7 @@
   }
 
   .section-image-detailes-instructor {
-    max-width: 400px;
-    margin-top: 40px;
+    display: none;
   }
 }
 
@@ -547,7 +553,7 @@
   border-radius: 10px;
   object-fit: cover;
   transition: transform 0.3s ease, opacity 0.3s ease;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 6px 12px rgb(0 0 0 / 10%);
 }
 
 .section-image-prerequisites-instructor:hover {
@@ -622,13 +628,13 @@
   background: #eee;
   border-radius: 10px;
   padding: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgb(0 0 0 / 10%);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .requirement-item-prerequisites-instructor:hover {
   transform: translateY(-5px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 6px 12px rgb(0 0 0 / 20%);
 }
 
 /* Requirement Icon */
@@ -710,6 +716,7 @@
     opacity: 0;
     transform: translateY(20px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -717,7 +724,7 @@
 }
 
 /* Responsive Design */
-@media (max-width: 991px) {
+@media (width <= 991px) {
   .prerequisites-instructor {
     flex-direction: column;
     text-align: center;
@@ -728,8 +735,7 @@
   }
 
   .section-image-prerequisites-instructor {
-    max-width: 100%;
-    margin-bottom: 40px;
+    display: none;
   }
 
   .requirements-grid-prerequisites-instructor {
@@ -812,12 +818,12 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   background: #fff;
   border-radius: 10px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgb(0 0 0 / 10%);
 }
 
 .potential-item-unlock-instructor:hover {
   transform: translateY(-10px);
-  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 6px 12px rgb(0 0 0 / 15%);
 }
 
 /* Potential Image */
@@ -914,6 +920,7 @@
     opacity: 0;
     transform: translateY(20px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -921,7 +928,7 @@
 }
 
 /* Responsive Design */
-@media (max-width: 991px) {
+@media (width <= 991px) {
   .unlock-potential-instructor {
     padding: 80px 32px;
   }

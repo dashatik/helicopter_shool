@@ -22,7 +22,7 @@ const History = () => {
             Our history isn't just a timeline—it's a testament to our dedication to aviation excellence and our students' success. We're proud of where we started and excited for where we're headed.
           </p>
         </div>
-        <img src="https://cdn.builder.io/api/v1/image/assets/536a8b606864400fab194975c3b1e353/c05edbaa7feb4652e612a345bd04a83802bdd973be6b1e6c873f05be18a923e3?apiKey=536a8b606864400fab194975c3b1e353&" alt="Historical image of Zhong Qian School" className="history-image" />
+        <img src="https://cdn.builder.io/api/v1/image/assets/536a8b606864400fab194975c3b1e353/c05edbaa7feb4652e612a345bd04a83802bdd973be6b1e6c873f05be18a923e3?apiKey=536a8b606864400fab194975c3b1e353&" alt="History of Zhong Qian School" className="history-image" />
       </div>
     </section>
   );

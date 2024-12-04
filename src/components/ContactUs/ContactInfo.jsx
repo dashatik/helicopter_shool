@@ -41,9 +41,9 @@ const ContactInfo = () => {
         ))}
       </div>
       <div className="social-links">
-        <a href="#" aria-label="Facebook"><img src="https://cdn.builder.io/api/v1/image/assets/536a8b606864400fab194975c3b1e353/779f1dc805bd92dff06913a3984426c37f7ec079304c40b419138854445addbd?apiKey=536a8b606864400fab194975c3b1e353&" alt="" /></a>
-        <a href="#" aria-label="Twitter"><img src="https://cdn.builder.io/api/v1/image/assets/536a8b606864400fab194975c3b1e353/eafc6b6235d4ef98682da9a2cf2edc1f0272a50cf4e71cb596c842497aa977ac?apiKey=536a8b606864400fab194975c3b1e353&" alt="" /></a>
-        <a href="#" aria-label="Instagram"><img src="https://cdn.builder.io/api/v1/image/assets/536a8b606864400fab194975c3b1e353/252d2a92-f07a-4c6f-a77b-23de206d5b15?apiKey=536a8b606864400fab194975c3b1e353&" alt="" /></a>
+        <a href="https://www.facebook.com/" aria-label="Facebook"><img src="https://cdn.builder.io/api/v1/image/assets/536a8b606864400fab194975c3b1e353/779f1dc805bd92dff06913a3984426c37f7ec079304c40b419138854445addbd?apiKey=536a8b606864400fab194975c3b1e353&" alt="" /></a>
+        <a href="https://x.com/" aria-label="Twitter"><img src="https://cdn.builder.io/api/v1/image/assets/536a8b606864400fab194975c3b1e353/eafc6b6235d4ef98682da9a2cf2edc1f0272a50cf4e71cb596c842497aa977ac?apiKey=536a8b606864400fab194975c3b1e353&" alt="" /></a>
+        <a href="https://www.instagram.com/" aria-label="Instagram"><img src="https://cdn.builder.io/api/v1/image/assets/536a8b606864400fab194975c3b1e353/252d2a92-f07a-4c6f-a77b-23de206d5b15?apiKey=536a8b606864400fab194975c3b1e353&" alt="" /></a>
       </div>
     </section>
   );

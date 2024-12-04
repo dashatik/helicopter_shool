@@ -52,7 +52,7 @@ const ApplicationForm = () => {
           <label htmlFor="message">Message</label>
           <textarea id="message" name="message" placeholder="Enter your message..." required></textarea>
         </div>
-        <div className="form-group checkbox-group">
+        <div className="form-group-checkbox-group">
           <input type="checkbox" id="terms" name="terms" required />
           <label htmlFor="terms">I agree to Terms</label>
         </div>

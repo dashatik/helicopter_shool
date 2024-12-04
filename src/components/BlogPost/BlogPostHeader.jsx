@@ -30,7 +30,7 @@ const BlogPostHeader = () => {
           <button aria-label="Copy link"><img src="https://cdn.builder.io/api/v1/image/assets/536a8b606864400fab194975c3b1e353/31013d06cddb55c39df4cdeb33b6b48c6fbc05737dd27767b800efb73ded2caf?apiKey=536a8b606864400fab194975c3b1e353&" alt="" /></button>
         </div>
       </div>
-      <img src="https://cdn.builder.io/api/v1/image/assets/536a8b606864400fab194975c3b1e353/b0cdca3cdace536c82f808b7a0dccd2b7da7c5124c3ed1e334e95ede697facaf?apiKey=536a8b606864400fab194975c3b1e353&" alt="Blog post header image" className="header-image-blog-post" />
+      <img src="https://cdn.builder.io/api/v1/image/assets/536a8b606864400fab194975c3b1e353/b0cdca3cdace536c82f808b7a0dccd2b7da7c5124c3ed1e334e95ede697facaf?apiKey=536a8b606864400fab194975c3b1e353&" alt="Blog post header" className="header-image-blog-post" />
     </section>
   );
 };

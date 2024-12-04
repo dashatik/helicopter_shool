@@ -121,11 +121,11 @@ body {
     object-fit: cover;
     border-radius: 10px;
     margin-top: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgb(0 0 0 / 10%);
   }
   
   /* Responsive Adjustments */
-  @media (max-width: 768px) {
+  @media (width <= 768px) {
     .blog-title-blog-post {
       font-size: 28px;
     }
@@ -149,7 +149,7 @@ body {
     max-width: 800px;
     margin: 0 auto;
     padding: 40px 20px;
-    font-family: 'Ubuntu', sans-serif;
+    font-family: Ubuntu, sans-serif;
     line-height: 1.8;
     color: #333;
   }
@@ -204,7 +204,7 @@ body {
     max-width: 100%;
     height: auto;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgb(0 0 0 / 10%);
     margin-bottom: 10px;
   }
   
@@ -226,7 +226,7 @@ body {
   }
   
   /* Responsive Design */
-  @media (max-width: 768px) {
+  @media (width <= 768px) {
     .blog-content-blog-post {
       padding: 20px 10px;
     }
@@ -254,7 +254,6 @@ body {
   
   /* Section Header */
   .section-header-blog-post {
-    text-align: center;
     margin-bottom: 40px;
     text-align: left;
   }
@@ -298,7 +297,7 @@ body {
   
   .news-card-blog-post:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 16px rgb(0 0 0 / 20%);
   }
   
   /* News Image */
@@ -407,7 +406,7 @@ body {
   }
   
   /* Responsive Design */
-  @media (max-width: 768px) {
+  @media (width <= 768px) {
     .section-title-blog-post {
       font-size: 28px;
     }
@@ -494,7 +493,7 @@ body {
     background-color: #ddd;
     color: #222;
     transform: translateY(-3px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 6px 12px rgb(0 0 0 / 20%);
 }
 
 .btn-secondary-CallToAction-blog-post {
@@ -507,11 +506,11 @@ body {
     background-color: #333;
     color: #fff;
     transform: translateY(-3px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 6px 12px rgb(0 0 0 / 20%);
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
+@media (width <= 768px) {
     .cta-blog-post {
         flex-direction: column; /* Stack text and buttons vertically */
         align-items: flex-start; /* Align content to the left */

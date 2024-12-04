@@ -5,20 +5,24 @@
 /* Hero Section for Helicopter Tours */
 .hero-section-tours {
   position: relative;
+  display: flex;
+  padding: 120px 20px;
   width: 100%;
-  height: 100vh; /* Full viewport height */
+  height: 500px; /* Full viewport height */
   overflow: hidden;
 }
 
 .hero-background-tours {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
   position: absolute;
-  top: -1000px;
+  top: 0;
   left: 0;
-  z-index: -2;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
   filter: brightness(0.7);
+  transform: scale(1.1); /* Slight zoom effect */
+  transition: transform 5s ease; /* Slow pan effect */
 }
 /* Dark Overlay */
 .hero-section-tours::after {
@@ -28,9 +32,10 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.4); /* Adjust for desired darkness */
+  background-color: rgb(0 0 0 / 40%); /* Adjust for desired darkness */
   z-index: -1; /* Sits above the background image */
 }
+
 .hero-content-tours {
   position: relative;
   display: flex;
@@ -42,7 +47,7 @@
   padding: 70px;
   margin: 0 auto;
   text-align: center;
-  color: #ffffff; 
+  color: #fff; 
 
 }
 
@@ -77,10 +82,6 @@
   text-decoration: none;
   cursor: pointer;
   transition: transform 0.2s ease, background-color 0.3s ease, opacity 0.3s ease;
-}
-
-
-.btn-book {
   background-image: linear-gradient(to right, #F1C189, #FFA245);
   color: #000;
   border-radius: 10px;
@@ -91,7 +92,57 @@
   transform: scale(1.05); /* Slightly enlarges the button */
   opacity: 0.95;
 }
+@media (max-width: 768px) {
+  /* Adjust text size further */
+  .hero-heading-tours {
+    font-size: 40px;
+  }
 
+  .hero-description-tours {
+    font-size: 17px;
+  }
+
+  /* Reduce padding */
+  .hero-content-tours {
+    padding: 30px;
+  }
+
+  /* Stack the buttons more closely */
+  .hero-buttons {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .btn-book {
+    padding: 12px 24px; /* Adjust button padding */
+    font-size: 18px; /* Adjust font size */
+    width: 130px;
+  }
+}
+
+@media (max-width: 576px) {
+  /* Further adjustments for very small screens */
+  .hero-heading-tours {
+    font-size: 32px;
+  }
+
+  .hero-description-tours {
+    font-size: 16px;
+  }
+
+  /* Make content section narrower */
+  .hero-content-tours {
+    padding: 20px;
+    max-width: 90%;
+  }
+
+  /* Adjust button padding for smaller screens */
+  .btn-book {
+    padding: 12px 24px;
+    width: 150px;
+    font-size: 16px;
+  }
+}
 /* General Tour Card Styling */
 .tour-card {
   display: flex;
@@ -99,7 +150,7 @@
   height: 750px;
   max-width: 1300px;
   background-color: #fff;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 12px rgb(0 0 0 / 10%);
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   position: relative;
@@ -219,6 +270,98 @@
 .btn-book-tour:hover {
   background-color: #e0e0e0; /* Slight darken on hover */
 }
+
+/* Responsive Design */
+@media (max-width: 991px) {
+  .tour-card {
+    flex-direction: column;
+    padding: 50px 20px; /* Adjust padding */
+    height: auto; /* Allow flexible height */
+  }
+
+  /* Adjust the image size */
+  .tour-image {
+    width: 80%;
+    max-width: 400px; /* Restrict the image width */
+    margin-right: 0;
+    margin-bottom: 20px; /* Add space between image and content */
+  }
+
+  .tour-content {
+    gap: 20px;
+  }
+
+  .tour-title {
+    font-size: 32px;
+    max-width: 100%;
+  }
+
+  .tour-description {
+    font-size: 16px;
+  }
+
+  .btn-book-tour {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+    align-self: flex-end; /* Align button to the right */
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .tour-card {
+    padding: 40px 15px;
+  }
+
+  /* Further adjust image size for small screens */
+  .tour-image {
+    width: 70%;
+    max-width: 300px;
+    margin-bottom: 20px;
+  }
+
+  .tour-title {
+    font-size: 28px;
+  }
+
+  .tour-description {
+    font-size: 14px;
+  }
+
+  .btn-book-tour {
+    width: 100px;
+    padding: 8px 16px;
+    font-size: 18px;
+    align-self: flex-end;
+  }
+}
+
+@media (max-width: 576px) {
+  .tour-card {
+    padding: 30px 10px;
+  }
+
+  .tour-image {
+    width: 60%;
+    max-width: 250px;
+    margin-bottom: 15px;
+  }
+
+  .tour-title {
+    font-size: 24px;
+  }
+
+  .tour-description {
+    font-size: 12px;
+  }
+
+  .btn-book-tour {
+    width: 100px;
+    padding: 6px 12px;
+    font-size: 18px;
+    align-self: flex-end;
+  }
+}
 /* Call to Action Section Styling */
 .cta-tours {
   display: flex;
@@ -262,7 +405,7 @@
   height: auto;
   border-radius: 10px;
   object-fit: cover;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 8px 16px rgb(0 0 0 / 15%);
 }
 
 /* CTA Button */
@@ -286,50 +429,80 @@
 
 /* Responsive Design */
 @media (max-width: 991px) {
-  .hero-heading-tours {
-    font-size: 40px;
-  }
-
-  .hero-description-tours {
-    font-size: 16px;
-  }
-
-  .tour-card {
-    flex-direction: column;
-    padding: 20px;
+  .cta-tours {
+    flex-direction: column; /* Stack content and image vertically */
+    padding: 80px 40px; /* Adjust padding */
+    gap: 40px; /* Increase space between content */
   }
 
   .cta-content-tours {
-    align-items: center;
-    text-align: center;
+    align-items: center; /* Center content for smaller screens */
+    text-align: center; /* Center text */
   }
 
   .cta-title-tours {
-    font-size: 28px;
+    font-size: 36px; /* Adjust font size for smaller screens */
   }
 
   .cta-description-tours {
-    font-size: 14px;
+    font-size: 16px; /* Adjust font size for smaller screens */
+  }
+
+  .cta-image-tours {
+    display: none;
+  }
+
+  .btn-large-tours {
+    width: 100%;    
+    padding: 14px 28px; /* Slightly smaller padding */
+    font-size: 1rem; /* Adjust font size */
   }
 }
 
 @media (max-width: 768px) {
-  .hero-heading-tours {
-    font-size: 32px;
+  .cta-tours {
+    padding: 60px 20px; /* Adjust padding for smaller devices */
   }
 
-  .tour-card {
-    padding: 15px;
+  .cta-title-tours {
+    font-size: 28px; /* Adjust font size */
+  }
+
+  .cta-description-tours {
+    font-size: 14px; /* Adjust font size */
+  }
+
+  .cta-image-tours {
+    display: none;
+  }
+
+  .btn-large-tours {
+    width: 100%;
+    padding: 12px 24px; /* Adjust padding */
+    font-size: 0.9rem; /* Adjust font size */
   }
 }
 
 @media (max-width: 576px) {
-  .hero-heading-tours {
-    font-size: 28px;
+  .cta-tours {
+    padding: 40px 15px; /* Further reduce padding */
   }
 
-  .btn-book, .btn-book-tour, .btn-large-tours {
-    font-size: 0.9rem;
-    padding: 8px 16px;
+  .cta-title-tours {
+    font-size: 24px; /* Further reduce font size */
+  }
+
+  .cta-description-tours {
+    font-size: 12px; /* Further reduce font size */
+  }
+
+  .cta-image-tours {
+    display: none;
+  }
+
+  .btn-large-tours {
+    width: 100%; /* Make button full-width */
+    padding: 12px; /* Adjust padding */
+    font-size: 0.8rem; /* Adjust font size */
   }
 }

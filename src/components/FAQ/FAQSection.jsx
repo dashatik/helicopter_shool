@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 
 const FAQSection = () => {
-  const [activeCategory, setActiveCategory] = useState(null); // Track open category
-  const [activeQuestion, setActiveQuestion] = useState(null); // Track open question
+  const [activeCategory, setActiveCategory] = useState(null);
+  const [activeQuestion, setActiveQuestion] = useState(null);
 
   const faqData = [
     {
@@ -117,7 +117,7 @@ const FAQSection = () => {
   ];
   const toggleCategory = (index) => {
     setActiveCategory(activeCategory === index ? null : index);
-    setActiveQuestion(null); // Reset question selection when switching categories
+    setActiveQuestion(null);
   };
 
   const toggleQuestion = (index) => {

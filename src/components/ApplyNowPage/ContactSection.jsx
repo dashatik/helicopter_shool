@@ -1,5 +1,5 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom'; // Ensure you're using react-router-dom
+import { useNavigate } from 'react-router-dom';
 
 const ContactSection = () => {
   const navigate = useNavigate();

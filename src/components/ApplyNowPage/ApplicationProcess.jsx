@@ -11,7 +11,6 @@ const ApplicationProcess = () => {
   return (
     <section className="application-process">
       <div className="process-content">
-        {/* Left Column with Title, Tagline, and Decoration */}
         <div className="left-column">
           <div className="process-header">
             <span className="process-tagline">Apply now</span>

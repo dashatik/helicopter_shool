@@ -33,9 +33,14 @@
 /* Navigation Links */
 .navigation {
   display: flex;
-  gap: 30px; /* Reduced gap for better alignment */
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
 }
 
+.navigation.open {
+  display: flex; /* For when the menu is open */
+}
 .nav-link {
   color: #333;
   font-size: 1rem;
@@ -73,8 +78,8 @@
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #ffffff;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+  box-shadow: 0 8px 16px rgb(0 0 0 / 20%);
   border-radius: 5px;
   top: 100%;
   left: 0;
@@ -87,11 +92,18 @@
   display: block;
 }
 
+.menu-toggle {
+  display: none; /* Hidden on larger screens */
+  background: none;
+  border: none;
+  font-size: 30px;
+  color: #333;
+  cursor: pointer;
+}
 /* Language and Buttons */
 .language-and-buttons {
   display: flex;
   align-items: center;
-  gap: 15px;
 }
 
 .language-toggle {
@@ -158,28 +170,259 @@
 }
 
 /* Mobile Responsiveness */
-@media (max-width: 768px) {
+@media (width <= 768px) {
   .navigation {
-    display: none; /* Hide nav links on small screens */
+    display: none; /* Hide nav links by default */
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: #eee;
+    padding: 20px;
+    z-index: 10;
+    
   }
 
+  .navigation.open {
+    display: flex; /* Show nav links when open */
+  }
+
+  .dropdown-content {
+    display: none; /* Hide dropdown content on small screens */
+  }
   .navbar-content {
-    justify-content: space-between; /* Re-align content */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 
   .menu-toggle {
     display: block; /* Add menu toggle button for mobile */
   }
+  .logo {
+    width: 120px; /* Adjust size for mobile */
+  }
+
+  .nav-link {
+    padding: 10px 0;
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+  }
+
+  .language-and-buttons {
+    display: none; /* Optionally hide buttons on mobile */
+  }
+
 }
 
+/* Dropdown Menu Visibility */
+.dropdown-menu {
+  display: none; /* Initially hidden */
+  position: absolute;
+  top: 20px;
+  left: -680px;
+  width: 900px;
+  background: #eee;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgb(0 0 0 / 15%);
+  z-index: 10;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.3s ease-in-out;
+}
+
+/* Show Dropdown on Hover */
+.dropdown:hover .dropdown-menu {
+  display: flex;
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* Dropdown Menu Styling */
+.dropdown-menu {
+  gap: 40px; /* Add spacing between sections */
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+/* Dropdown Columns */
+.dropdown-column {
+  flex: 1;
+  margin-right: 10px;
+}
+
+.dropdown-column h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #222;
+  width: 200px;
+  margin-bottom: 16px;
+}
+
+.dropdown-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.dropdown-column ul li {
+  margin-bottom: 12px;
+  display: flex;
+  align-items: flex; /* Aligns image and text */
+  gap: 10px; /* Spacing between image and text */
+}
+
+.dropdown-column ul li img {
+  width: auto;
+  height: 20px;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+
+
+.dropdown-column ul li a {
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  color: #222;
+  transition: color 0.3s ease-in-out;
+}
+
+.dropdown-column ul li a:hover {
+  color: #FFB266; /* Highlight link on hover */
+}
+
+.dropdown-column ul li p {
+  font-size: 14px;
+  color: #444;
+  margin: 4px 0 0;
+  transition: color 0.3s ease-in-out;
+}
+
+.dropdown-column ul li:hover p {
+  color: #222; /* Slightly darken description on hover */
+}
+
+/* Latest News Section */
+.latest-news {
+  flex: 2;
+  margin-left: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.news-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.news-item img {
+  width: 100px;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.news-item img:hover {
+  transform: scale(1.05); /* Slight zoom on hover */
+  box-shadow: 0 4px 8px rgb(0 0 0 / 20%);
+}
+
+.news-item h4 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #222;
+  margin: 0 0 8px;
+  transition: color 0.3s ease-in-out;
+}
+
+.news-item h4:hover {
+  color: #FFB266; /* Highlight title on hover */
+}
+
+.news-item p {
+  font-size: 14px;
+  color: #222;
+  margin: 0 0 8px;
+}
+
+.news-item a {
+  font-size: 14px;
+  color: #222;
+  text-decoration: none;
+  font-weight: 600;
+  transition: text-decoration 0.3s ease-in-out;
+}
+
+.news-item a:hover {
+  text-decoration: underline;
+}
+
+.news-more {
+  font-size: 14px;
+  font-weight: 600;
+  color: #222;
+  cursor: pointer;
+  text-align: right;
+  margin-top: 10px;
+}
+
+.news-more:hover {
+  text-decoration: underline;
+}
+
+/* Smooth Transitions for Hover Effects */
+.dropdown-menu * {
+  transition: all 0.3s ease-in-out;
+}
+
+/* Responsive Design */
+@media (width <= 991px) {
+  .dropdown-menu {
+    position: absolute; /* Position dropdown menu absolutely */
+    top: 20px;
+    left: -200px; /* Adjust position to fit smaller screens */
+    width: 500px; /* Smaller width for dropdown */
+    padding: 20px; /* Reduced padding */
+    flex-direction: column; /* Stack items vertically */
+    gap: 15px; /* Smaller gap between sections */
+    border-radius: 10px;
+  }
+
+  .navbar-expanded .navigation {
+    display: flex; /* Show navigation when menu is expanded */
+  }
+
+  .dropdown-column {
+    margin-right: 0;
+  }
+
+  .latest-news {
+    margin-left: 0;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+}
 
 
 /* Footer Section Layout */
 .footer {
   padding: 80px 64px;
-  background-color: #222222 !important; /* Dark background for contrast */
-  color: #222222 !important;
-  height: 500px;
+  background-color: #222 !important; /* Dark background for contrast */
+  color: #222 !important;
+  height: auto;
 }
 
 .footer-content {
@@ -214,7 +457,7 @@
 
 .footer-heading {
   font-size: 1.2rem;
-  color: #ffffff;
+  color: #fff;
   font-weight: bold;
   margin-bottom: 15px;
 }
@@ -246,7 +489,7 @@
 
 .newsletter-heading {
   font-size: 1.25rem;
-  color: #ffffff;
+  color: #fff;
   font-weight: bold;
   margin-bottom: 10px;
 }
@@ -335,193 +578,92 @@
 .social-icon:hover {
   filter: brightness(0.7) invert(1); /* Slightly darkens on hover */
 }
+/* Responsive Styles */
+@media (max-width: 1200px) {
+  .footer-content {
+    padding: 50px 40px;
+  }
 
+  .footer-links {
+    gap: 30px;
+  }
 
-/* Dropdown Menu Visibility */
-.dropdown-menu {
-  display: none; /* Initially hidden */
-  position: absolute;
-  top: 20px;
-  left: -680px;
-  width: 900px;
-  background: #eee;
-  padding: 40px;
-  border-radius: 15px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-  z-index: 10;
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(-10px);
-  transition: all 0.3s ease-in-out;
+  .footer-column {
+    flex: 1;
+    margin-bottom: 20px;
+  }
+
+  .footer-newsletter {
+    max-width: 100%;
+  }
+
+  .footer-social {
+    gap: 10px;
+  }
 }
 
-/* Show Dropdown on Hover */
-.dropdown:hover .dropdown-menu {
-  display: flex;
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
-}
+@media (max-width: 768px) {
+  .footer-content {
+    padding: 40px 20px;
+  }
 
-/* Dropdown Menu Styling */
-.dropdown-menu {
-  gap: 40px; /* Add spacing between sections */
-  justify-content: space-between;
-  align-items: flex-start;
-}
-
-/* Dropdown Columns */
-.dropdown-column {
-  flex: 1;
-  margin-right: 10px;
-}
-
-.dropdown-column h3 {
-  font-size: 18px;
-  font-weight: 700;
-  color: #222;
-  width: 200px;
-  margin-bottom: 16px;
-}
-
-.dropdown-column ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.dropdown-column ul li {
-  margin-bottom: 12px;
-  display: flex;
-  align-items: flex; /* Aligns image and text */
-  gap: 10px; /* Spacing between image and text */
-}
-
-.dropdown-column ul li img {
-  width: auto;
-  height: 20px;
-  object-fit: cover;
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-}
-
-
-
-.dropdown-column ul li a {
-  text-decoration: none;
-  font-size: 16px;
-  font-weight: 600;
-  color: #222;
-  transition: color 0.3s ease-in-out;
-}
-
-.dropdown-column ul li a:hover {
-  color: #FFB266; /* Highlight link on hover */
-}
-
-.dropdown-column ul li p {
-  font-size: 14px;
-  color: #444;
-  margin: 4px 0 0;
-  transition: color 0.3s ease-in-out;
-}
-
-.dropdown-column ul li:hover p {
-  color: #222; /* Slightly darken description on hover */
-}
-
-/* Latest News Section */
-.latest-news {
-  flex: 2;
-  margin-left: 0px;
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-}
-
-.news-item {
-  display: flex;
-  align-items: flex-start;
-  gap: 16px;
-}
-
-.news-item img {
-  width: 100px;
-  height: auto;
-  border-radius: 8px;
-  object-fit: cover;
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-}
-
-.news-item img:hover {
-  transform: scale(1.05); /* Slight zoom on hover */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.news-item h4 {
-  font-size: 16px;
-  font-weight: 600;
-  color: #222;
-  margin: 0 0 8px;
-  transition: color 0.3s ease-in-out;
-}
-
-.news-item h4:hover {
-  color: #FFB266; /* Highlight title on hover */
-}
-
-.news-item p {
-  font-size: 14px;
-  color: #222;
-  margin: 0 0 8px;
-}
-
-.news-item a {
-  font-size: 14px;
-  color: #222;
-  text-decoration: none;
-  font-weight: 600;
-  transition: text-decoration 0.3s ease-in-out;
-}
-
-.news-item a:hover {
-  text-decoration: underline;
-}
-
-.news-more {
-  font-size: 14px;
-  font-weight: 600;
-  color: #222;
-  cursor: pointer;
-  text-align: right;
-  margin-top: 10px;
-}
-
-.news-more:hover {
-  text-decoration: underline;
-}
-
-/* Smooth Transitions for Hover Effects */
-.dropdown-menu * {
-  transition: all 0.3s ease-in-out;
-}
-
-/* Responsive Design */
-@media (max-width: 991px) {
-  .dropdown-menu {
-    left: 0;
-    width: 100%;
+  .footer-links {
     flex-direction: column;
+    align-items: center;
     gap: 20px;
-    padding: 20px;
   }
 
-  .dropdown-column {
-    margin-right: 0;
+  .footer-logo {
+    width: 180px;
+    height: 100px;
   }
 
-  .latest-news {
-    margin-left: 0;
+  .footer-column {
+    flex: 1;
+    margin-bottom: 20px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-social {
+    justify-content: center;
+    gap: 15px;
   }
 }
 
+@media (max-width: 480px) {
+  .footer-content {
+    padding: 30px 15px;
+  }
 
+  .footer-links {
+    gap: 15px;
+  }
+
+  .footer-column {
+    margin-bottom: 10px;
+  }
+
+  .footer-logo {
+    width: 160px;
+    height: 80px;
+  }
+
+  .footer-newsletter {
+    max-width: 100%;
+    margin-top: 20px;
+  }
+
+  .footer-credits p,
+  .footer-credits a {
+    font-size: 0.75rem;
+  }
+
+  .footer-social {
+    gap: 10px;
+  }
+}
