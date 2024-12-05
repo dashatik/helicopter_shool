@@ -506,6 +506,7 @@
   .container-cred {
     flex-direction: column;
     align-items: center;
+    height: auto;
   }
 
   .decorative-image-1-cred,

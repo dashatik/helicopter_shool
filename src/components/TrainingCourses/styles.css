@@ -142,7 +142,7 @@
 
   .btn-about-training-courses,
   .btn-apply-training-courses {
-    font-size: 1rem;
+    font-size: 20px;
     padding: 10px 20px;
   }
 }
@@ -153,12 +153,12 @@
   }
 
   .hero-description-training {
-    font-size: 14px;
+    font-size: 15px;
   }
 
   .btn-about-training-courses,
   .btn-apply-training-courses {
-    font-size: 0.9rem;
+    font-size: 16px;
     padding: 8px 16px;
   }
 }
@@ -173,12 +173,12 @@
   }
 
   .hero-description-training {
-    font-size: 12px;
+    font-size: 15px;
   }
 
   .btn-about-training-courses,
   .btn-apply-training-courses {
-    font-size: 0.8rem;
+    font-size: 16px;
     padding: 6px 12px;
   }
 }
@@ -673,7 +673,10 @@
   .btn-CTA-training-courses {
     flex-direction: column; /* Stack buttons vertically */
     gap: 16px;
+    font-size: 16px;
+    padding: 12px 24px;
   }
+
 }
 
 @media (width <= 768px) {
@@ -686,7 +689,7 @@
   }
 
   .btn-primary-CTA-training-courses, .btn-secondary-CTA-training-courses {
-    font-size: 0.9rem;
+    font-size: 16px;
     padding: 10px 20px;
   }
 }
@@ -702,6 +705,6 @@
 
   .btn-primary-CTA-training-courses, .btn-secondary-CTA-training-courses {
     padding: 8px 16px;
-    font-size: 0.8rem;
+    font-size: 16px;
   }
 }

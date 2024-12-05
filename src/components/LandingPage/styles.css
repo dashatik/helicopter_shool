@@ -1267,6 +1267,9 @@ body {
   .company-logo {
     width: 60px;
   }
+  .testimonial-divider {
+    display: none;
+  }
 }
 /* FAQ Section Layout */
 .faq-section-landing {
