@@ -338,11 +338,12 @@
 
   .explanation-title-cpl {
     font-size: 30px;
+    width: auto;
   }
 
   .explanation-text-cpl {
     font-size: 16px;
-    width: auto;
+    margin-right: 10px;
   }
 
   /* Optional: Adjust decorative gradient for mobile */
@@ -791,7 +792,7 @@
   color: #000;
   margin-bottom: 24px;
   line-height: 1.3;
-  width: 600px !important;
+  width: auto;
 }
 
 .milestone-title-clp:hover {
@@ -949,7 +950,7 @@
   /* Adjust title size for smaller screens */
   .milestones-title-cpl {
     font-size: 30px; /* Smaller font size */
-    width: 100%;
+    width: 100px;
   }
 
   .timeline-cpl {
@@ -965,12 +966,9 @@
     padding: 80px 32px; /* Reduce padding for smaller screens */
   }
 
-  .milestones-title-cpl {
-    font-size: 24px; /* Further reduce font size */
-  }
-
   .milestone-title-cpl {
     font-size: 18px; /* Adjust milestone title size */
+    width: auto;
   }
 
   .timeline-icon-cpl {

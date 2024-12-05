@@ -750,7 +750,7 @@
   }
 
   .timeline-divider-ppl {
-    height: 50px; /* Reduce height of the dividers */
+    display: none;
   }
 
   .timeline-image-ppl {
@@ -797,7 +797,7 @@
   }
 
   .timeline-divider-ppl {
-    height: 40px; /* Adjust divider height */
+    display: none;
   }
 
   .timeline-image-ppl {
