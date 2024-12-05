@@ -557,7 +557,6 @@
 }
 
 .section-header {
-  margin-bottom: none;
   margin-bottom: -5px !important;
 }
 
@@ -594,6 +593,8 @@
   font-weight: 700;
   color: #000;
   margin-top: 20px;
+  align-self: center;
+  margin-bottom: 20px;
 }
 
 /* Right Side - Image Section */

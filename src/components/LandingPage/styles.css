@@ -1397,6 +1397,7 @@ body {
   .faq-container-landing {
     padding: 20px;
     box-shadow: 0 2px 8px rgb(0 0 0 / 15%);
+    width: 600px;
   }
 
   .faq-heading-landing {

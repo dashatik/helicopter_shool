@@ -84,7 +84,7 @@
 .btn-about-training-courses,
 .btn-apply-training-courses {
   padding: 12px 24px;
-  font-size: 1.1rem;
+  font-size: 18;
   font-weight: bold;
   text-decoration: none;
   cursor: pointer;
@@ -112,7 +112,7 @@
 /* Apply Button */
 .btn-apply-training-courses {
   background-image: linear-gradient(to right, #F1C189, #FFA245);
-  border: 1px solid #FFB266;
+  border: 1px solid #333;
   color: #111;
 }
 
@@ -143,7 +143,7 @@
   .btn-about-training-courses,
   .btn-apply-training-courses {
     font-size: 20px;
-    padding: 10px 20px;
+    padding: 12px 24px;
   }
 }
 
@@ -159,7 +159,7 @@
   .btn-about-training-courses,
   .btn-apply-training-courses {
     font-size: 16px;
-    padding: 8px 16px;
+    padding: 10px 20px;
   }
 }
 
@@ -178,8 +178,8 @@
 
   .btn-about-training-courses,
   .btn-apply-training-courses {
-    font-size: 16px;
-    padding: 6px 12px;
+    font-size: 20px;
+    padding: 8px 12px;
   }
 }
 
@@ -237,14 +237,16 @@
   grid-column: 1 / span 2;
   grid-row: 1 / span 2;
   height: 580px; /* Set to the desired height */
+  text-align: ;
 
 }
 
 /* Image styling for improved quality */
 .course-card:nth-child(1) .course-image {
-  width: 101%; /* Use full width to prevent pixelation */
-  height: auto; /* Limit max height without stretching */
-  object-fit: cover; /* Ensures the image covers the area while maintaining aspect ratio */
+  width: 100%; /* Full width of the card */
+  height: auto; /* Set max height to avoid pixelation */
+  object-fit: contain; /* Keeps the image's aspect ratio */
+  margin-top: auto; /* Aligns image at the bottom */
 }
 
 /* Align text at the top of the box */
@@ -487,12 +489,60 @@
   }
 
   .course-grid {
-    grid-template-columns: repeat(2, 1fr); /* 2 columns on medium screens */
-    gap: 16px;
+    display: grid;
+    grid-template-columns: 1fr; /* Force one column per row */
+    gap: 15px;
+    padding: 0 20px;
   }
 
   .course-card {
+    grid-column: 1 / span 1 !important; /* Override specific column spans */
+    grid-row: auto !important; /* Reset row spans */
+    width: 100%; /* Ensure full width */
+    height: auto; /* Adjust height dynamically */
+    display: flex;
+    flex-direction: column; /* Ensure column layout */
+  }
+
+  .course-card:nth-child(1),
+  .course-card:nth-child(2),
+  .course-card:nth-child(3),
+  .course-card:nth-child(4),
+  .course-card:nth-child(5) {
+    grid-column: 1 / span 1 !important; /* Force each card to occupy one row */
+    grid-row: auto !important; /* Reset any custom row settings */
+  }
+
+  .course-card:nth-child(1),
+  .course-card:nth-child(5) {
     height: auto;
+  }
+
+  .course-card:nth-child(3) .card-content, 
+  .course-card:nth-child(2) .card-content, 
+  .course-card:nth-child(4) .card-content {
+    margin-top: -40px;
+  }
+  .course-card:nth-child(4) {
+    grid-template-columns: 1fr; /* Stack image and text vertically */
+    grid-column: 1 / span 1; /* Reset column span for single-column layout */
+    grid-row: auto; /* Allow automatic row placement */
+    height: auto; /* Adjust height dynamically */
+  }
+
+  .course-card:nth-child(4) .card-content {
+    margin-top: 10px;
+    padding: 20px;
+    width: 100%; /* Stretch content across full width */
+    text-align: left; /* Align text to the left */
+  }
+
+  .course-card:nth-child(1) .course-image,
+  .course-card:nth-child(2) .course-image,
+  .course-card:nth-child(3) .course-image,
+  .course-card:nth-child(4) .course-image,
+  .course-card:nth-child(5) .course-image {
+    display: none;
   }
 
   .btn-coursesection {
@@ -509,6 +559,14 @@
     grid-template-columns: 1fr; /* Single column for mobile screens */
     gap: 16px;
   }
+
+  .course-card {
+    grid-column: 1 / span 1 !important;
+    grid-row: auto !important;
+    width: 100%;
+    height: auto;
+  }
+
   .card-description {
     font-size: 0.9rem;
   }
@@ -523,10 +581,22 @@
     padding: 0 10px;
   }
   .course-section {
-    padding: 80px 16px; /* Reduce padding on small screens */
+    padding: 60px 16px; /* Reduce padding on small screens */
   }
   .section-title {
     font-size: 28px;
+  }
+  .course-grid {
+    grid-template-columns: 1fr; /* Maintain single column */
+    gap: 15px;
+    padding: 0 12px;
+  }
+
+  .course-card {
+    grid-column: 1 / span 1 !important; /* Ensure full row for all cards */
+    grid-row: auto !important; /* Reset specific row assignments */
+    width: 100%;
+    margin: 0 auto;
   }
 
   .card-description {
@@ -537,6 +607,7 @@
     padding: 4px 10px;
     font-size: 0.8rem;
   }
+  
 }
 /* CTA Section Layout */
 .cta-section-training-courses {
