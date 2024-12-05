@@ -593,9 +593,10 @@
 
   .btn-coursedetails-secondary-cpl,
   .btn-link-coursedetailes-cpl {
-    width: 100%;
+    width: 150px;
     padding: 12px 18px;
     font-size: 14px;
+    align-items: center;
   }
 
   .details-image-cpl {
@@ -954,6 +955,9 @@
   .timeline-cpl {
     gap: 40px; /* Reduce the gap between items in the timeline */
   }
+  .timeline-divider-cpl {
+    display: none;
+  }
 }
 
 @media (max-width: 480px) {
@@ -979,7 +983,8 @@
   }
 
   .milestones-actions-cpl {
-    flex-direction: column; /* Stack buttons vertically on smaller screens */
+    align-items: flex-start;
+    display: flex; /* Stack buttons vertically on smaller screens */
     gap: 12px;
   }
 
@@ -992,6 +997,10 @@
   .link-icon-cpl {
     width: 14px;
     height: 14px; /* Smaller icons for links */
+  }
+
+  .timeline-divider-cpl {
+    display: none;
   }
 }
 

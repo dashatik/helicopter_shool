@@ -1273,4 +1273,8 @@
     bottom: -10px; /* Adjust position */
     right: -20px; /* Adjust horizontal alignment */
   }
+  .btn-cta-primary-ppl,
+  .btn-cta-secondary-ppl {
+    width: 150px;
+  }
 }
