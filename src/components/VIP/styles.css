@@ -688,6 +688,11 @@
   .cta-actions-vip {
     flex-direction: column;
     gap: 16px;
+    
+  }
+  .btn-cta-vip {
+    width: 170px;
+    align-self: center;
   }
 }
 
