@@ -104,6 +104,7 @@
 .language-and-buttons {
   display: flex;
   align-items: center;
+  gap: 10px;
 }
 
 .language-toggle {
@@ -113,10 +114,9 @@
 }
 
 .language-icon {
-  width: 24px;
-  height: 24px;
+  width: 12px;
+  height: 12px;
 }
-
 
 .btn-second-navbar {
   background-image: linear-gradient(to right, #F1C189, #FFA245); 
@@ -199,6 +199,8 @@
 
   .menu-toggle {
     display: block; /* Add menu toggle button for mobile */
+    position: absolute;
+    right: 10px;
   }
   .logo {
     width: 120px; /* Adjust size for mobile */
@@ -211,10 +213,17 @@
     border-bottom: 1px solid #eee;
   }
 
-  .language-and-buttons {
-    display: none; /* Optionally hide buttons on mobile */
+  .language-toggle {
+    position: absolute;
+    right: 70px;
+    width: 10px;
+    height: 10px;
   }
 
+  .btn-navbar {
+    display: none;
+  }
+  
 }
 
 /* Dropdown Menu Visibility */

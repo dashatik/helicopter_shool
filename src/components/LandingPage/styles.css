@@ -175,19 +175,21 @@ body {
 
 .layout-section {
   display: flex;
-  align-items: top;
-  justify-content: space-between;
-  padding: 1px 64px;
-  height: 1100px;
+  flex-direction: column; /* Stack content for responsive design */
+  justify-content: center; /* Center vertically */
+  align-items: center; /* Center horizontally */
+  padding: 112px 64px; /* Adjust padding to match WhyChooseUs.css */
   background-image: linear-gradient(180deg, rgb(241 240 238 / 100%), rgb(224 218 255 / 100%));
 }
 
 .layout-content {
   display: flex;
-  flex-direction: row;
   gap: 40px;
-  max-width: 1200px;
+  flex-wrap: wrap; /* Allow wrapping for responsiveness */
+  justify-content: space-between;
+  align-items: flex-start;
   width: 100%;
+  max-width: 1200px;
 }
 
 .layout-column {
@@ -270,30 +272,40 @@ body {
   margin-top: 10px;
 }
 
+/* Adjust Video Behavior */
 .placeholder-video {
-  height: auto;
-  width: 1200px;
-  padding: 0 64px;
-  align-self: stretch !important;
-  position: absolute;
-  top: 1700px;
-  left: 45px;
+  width: 100%;
+  max-width: 1200px;
+  height: 400px; /* Match height from WhyChooseUs.css */
+  margin: 40px 0; /* Same margin for consistency */
+  border-radius: 8px; /* Rounded corners */
+  object-fit: cover; /* Ensures the video scales properly */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+.placeholder-video:hover {
+  transform: scale(1.03); /* Slight zoom effect */
+  box-shadow: 0 8px 20px rgb(0 0 0 / 15%); /* Add shadow on hover */
+}
+
 /* Responsive Design */
 @media (width <= 991px) {
   .layout-content {
     flex-direction: column;
+    gap: 20px;
     align-items: center;
   }
 
   .placeholder-video {
-    margin-top: -310px;
-    width: 100%; /* Ensures full width on smaller screens */
-    height: auto; /* Maintains aspect ratio */
+    height: 300px;
   }
 }
 
 @media (width <= 768px) {
+  .layout-content {
+    text-align: center;
+  }
+  
   .layout-heading {
     font-size: 2rem;
   }
@@ -306,9 +318,15 @@ body {
     font-size: 0.9rem;
     padding: 8px 16px;
   }
+  .placeholder-video {
+    height: 250px;
+  }
 }
 
 @media (width <= 576px) {
+  .layout-content {
+    padding: 20px;
+  }
   .layout-heading {
     font-size: 1.8rem;
   }
@@ -319,6 +337,9 @@ body {
 
   .btn-dark {
     width: 100%; /* Full-width buttons for mobile */
+  }
+  .placeholder-video {
+    height: 200px;
   }
 }
 /* Stats Section Layout */
@@ -426,6 +447,7 @@ body {
 @media (width <= 991px) {
   .stats-content {
     text-align: center;
+    margin-top: 20px;
   }
 
   .stats-row {

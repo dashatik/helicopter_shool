@@ -21,7 +21,6 @@ const IntroSection = () => {
             <Link to="/about" className="btn-dark-training">Learn More</Link>
             <Link to="/contact" className="link-with-icon">
               <span className="link-text">Contact</span>
-              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/fc10d73d-3c28-4cfe-a438-ef0b15456d95?placeholderIfAbsent=true&apiKey=536a8b606864400fab194975c3b1e353" alt="Contact icon" className="link-icon" />
             </Link>
           </div>
         </div>
