@@ -400,7 +400,7 @@
     position: absolute; /* Position dropdown menu absolutely */
     top: 20px;
     left: -150px; /* Adjust position to fit smaller screens */
-    width: 430px; /* Smaller width for dropdown */
+    width: 410px; /* Smaller width for dropdown */
     padding: 20px; /* Reduced padding */
     flex-direction: column; /* Stack items vertically */
     gap: 15px; /* Smaller gap between sections */

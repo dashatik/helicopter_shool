@@ -20,13 +20,9 @@ const Navbar = () => {
             className="logo"
           />
         </a>
-
-        {/* Hamburger Icon */}
         <button className="menu-toggle" onClick={handleMenuToggle} aria-label="Toggle menu">
-          &#9776; {/* Hamburger icon */}
+          &#9776;
         </button>
-
-        {/* Navigation Links */}
         <nav className={`navigation ${isMenuOpen ? 'open' : ''}`}>
           <Link to="/about" className="nav-link">About Us</Link>
           <Link to="/training-courses" className="nav-link">Training Courses</Link>
