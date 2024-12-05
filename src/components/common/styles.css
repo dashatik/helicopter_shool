@@ -104,18 +104,61 @@
 .language-and-buttons {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 13px;
+}
+
+.language-toggle-container {
+  position: relative;
 }
 
 .language-toggle {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Space between icons */
   background: none;
   border: none;
   cursor: pointer;
 }
 
+.language-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+
+.language-option {
+  display: block;
+  width: 100%;
+  padding: 8px 16px;
+  text-align: left;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.language-option:hover {
+  background-color: #f1f1f1;
+  border-radius: 10px;
+}
+
+.language-toggle span {
+  font-size: 14px;
+  font-weight: bold;
+}
+
 .language-icon {
   width: 12px;
   height: 12px;
+}
+
+.additional-language-icon {
+  width: 20px;
+  height: 20px;
 }
 
 .btn-second-navbar {
@@ -215,9 +258,21 @@
 
   .language-toggle {
     position: absolute;
-    right: 70px;
+    right: 110px;
     width: 10px;
     height: 10px;
+  }
+
+  .additional-language-icon {
+    position: absolute;
+    right: 20px;
+  }
+
+  .language-menu {
+    position: absolute;
+    top: 17px;
+    right: 30px;
+    width: 125px;
   }
 
   .btn-navbar {
