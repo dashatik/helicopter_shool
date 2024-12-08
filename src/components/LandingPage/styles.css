@@ -179,7 +179,7 @@ body {
   justify-content: center; /* Center vertically */
   align-items: center; /* Center horizontally */
   padding: 112px 64px; /* Adjust padding to match WhyChooseUs.css */
-  background-image: linear-gradient(180deg, rgb(241 240 238 / 100%), rgb(224 218 255 / 100%));
+  background-color: #eee;
 }
 
 .layout-content {
@@ -348,7 +348,7 @@ body {
   align-items: center;
   justify-content: center;
   padding: 100px;
-  background: linear-gradient(180deg, rgb(224 218 255 / 100%), rgb(241 240 238 / 100%)) !important;
+  background: #eee;
   position: relative;
 }
 
@@ -679,7 +679,7 @@ body {
 /* Fleet Section Layout */
 .fleet-section {
   padding: 80px 60px;
-  background-image: linear-gradient(180deg, rgb(241 240 238 / 100%), rgb(224 218 255 / 100%));
+  background: #eee;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -732,6 +732,7 @@ body {
   color: #222;
   font-weight: bold;
   position: relative;
+  margin-bottom: 13px;
 }
 
 .fleet-heading::after {
@@ -886,7 +887,7 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 50px; /* Reduced gap for smaller screens */
-  background-image: linear-gradient(180deg, rgb(224 218 255 / 100%), rgb(241 240 238 / 100%));
+  background: #eee;
 }
 
 /* Title Section */
@@ -1111,7 +1112,7 @@ body {
 /* Testimonial Section Layout */
 .testimonial-section {
   padding: 80px 60px;
-  background-image: linear-gradient(180deg, rgb(241 240 238 / 100%), rgb(224 218 255 / 100%));
+  background: #eee;
   position: relative;
   overflow: hidden;
   display: flex;
@@ -1274,7 +1275,7 @@ body {
 /* FAQ Section Layout */
 .faq-section-landing {
   padding: 80px;
-  background: #E0DAFF !important;
+  background: #eee !important;
 
 }
 
@@ -1429,7 +1430,7 @@ body {
   align-items: flex-start;
   align-self: stretch;
   gap: 80px;
-  background-image: linear-gradient(180deg, rgb(224 218 255 / 100%), rgb(241 240 238 / 100%));
+  background: #eee !important;
 }
 
 .blog-container {
