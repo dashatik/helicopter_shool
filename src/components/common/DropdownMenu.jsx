@@ -10,21 +10,21 @@ const DropdownMenu = () => {
           <li className="dropdown-item">
             <img src="https://cdn.builder.io/api/v1/image/assets/536a8b606864400fab194975c3b1e353/539eb0f8ec854dc9a3cd8285fe1ceb68" alt="PPL Courses" className="dropdown-image" />
             <div>
-              <a href="/ppl-courses" className="dropdown-link">PPL Courses</a>
+              <a href="/ppl" className="dropdown-link">PPL Courses</a>
               <p className="dropdown-description">Private Pilot License Training for Beginners</p>
             </div>
           </li>
           <li className="dropdown-item">
             <img src="https://cdn.builder.io/api/v1/image/assets%2F536a8b606864400fab194975c3b1e353%2F5c17b4a4298b471fb49d4599674dc14d" alt="CPL Courses" className="dropdown-image" />
             <div>
-              <a href="/cpl-courses" className="dropdown-link">CPL Courses</a>
+              <a href="/cpl" className="dropdown-link">CPL Courses</a>
               <p className="dropdown-description">Commercial Pilot License for Aspiring Pilots</p>
             </div>
           </li>
           <li className="dropdown-item">
             <img src="https://cdn.builder.io/api/v1/image/assets/536a8b606864400fab194975c3b1e353/2f63178447b94c7993f72f631a3bc646" alt="VIP Courses" className="dropdown-image" />
             <div>
-              <a href="/vip-courses" className="dropdown-link">VIP Courses</a>
+              <a href="/vip" className="dropdown-link">VIP Courses</a>
               <p className="dropdown-description">Exclusive Training for Elite Helicopter Pilots</p>
             </div>
           </li>
@@ -38,7 +38,7 @@ const DropdownMenu = () => {
           <li className="dropdown-item">
             <img src="https://cdn.builder.io/api/v1/image/assets/536a8b606864400fab194975c3b1e353/61e90a70a35d4b5e9174c659995d85a1" alt="Special Training" className="dropdown-image" />
             <div>
-              <a href="/special-training" className="dropdown-link">Special Training</a>
+              <a href="/special-courses" className="dropdown-link">Special Training</a>
               <p className="dropdown-description">Elevate your skills to the new level</p>
             </div>
           </li>
@@ -80,7 +80,7 @@ const DropdownMenu = () => {
           <div>
             <h4 className="news-title">A sneak peek into the helicopter industry</h4>
             <p className="news-description">We are always pleased when we receive visits from colleagues in the helicopter industry.</p>
-            <a href="/news-1" className="news-link">Read more</a>
+            <a href="/news-blog-post" className="news-link">Read more</a>
           </div>
         </div>
         <div className="news-item">
@@ -88,7 +88,7 @@ const DropdownMenu = () => {
           <div>
             <h4 className="news-title">Greetings from Greece</h4>
             <p className="news-description">We love getting greetings from our former students in sunnier places!</p>
-            <a href="/news-2" className="news-link">Read more</a>
+            <a href="/news-blog-post" className="news-link">Read more</a>
           </div>
         </div>
         <div className="news-more">More</div>
