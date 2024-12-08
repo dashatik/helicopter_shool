@@ -285,7 +285,7 @@ body {
   background-color: #222; /* Dark background as per SVG */
   padding: 40px;
   border-radius: 8px;
-  color: #fff; /* White text for contrast */
+  color: #eee; /* White text for contrast */
 }
 
 /* Section Header Styling */
